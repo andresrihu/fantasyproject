@@ -7,7 +7,7 @@ export default {
     name: "HomeView",
     data() {
         return {
-            pageTitle: "Test 2"
+            pageTitle: "New motorolla"
         }
     }
 }
