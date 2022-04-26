@@ -7,7 +7,7 @@ export default {
     name: "HomeView",
     data() {
         return {
-            pageTitle: "Max test"
+            pageTitle: "Test 2"
         }
     }
 }
