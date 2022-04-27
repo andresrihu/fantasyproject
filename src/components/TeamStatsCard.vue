@@ -1,8 +1,11 @@
 <template>
   <div class="statcontainer">
-    <h2>{{ name }}</h2>
-    <p id="founded">Year Founded: {{ founded }}</p>
-    <p id="coach">Head Coach: {{ coach }}</p>
+    <div class="card-body">
+      <h2 class="card-title">{{ name }}</h2>
+      <p class="card-subtitle text-muted">{{ founded }}</p>
+      <p class="card-text">Head Coach: {{ coach }}</p>
+      <p class="card-text">Quarterback: {{ qb }}</p>
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,7 @@ export default {
       founded: "1932",
       coach: "Bill Belichick",
       name: "Patriots",
+      qb: "Mac Jones",
     };
   },
 };
