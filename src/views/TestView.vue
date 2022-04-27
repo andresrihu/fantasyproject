@@ -1,14 +1,14 @@
 <template>
-  <TeamStatsCard />
+  <AthleteInjuryList />
 </template>
 
 <script>
-import TeamStatsCard from "../components/TeamStatsCard.vue";
+import AthleteInjuryList from "../components/AthleteInjuryList.vue";
 export default {
   name: "TestView",
   components: {
-    TeamStatsCard: TeamStatsCard,
-  },
+    AthleteInjuryList: AthleteInjuryList,
+  }
 };
 </script>
 
