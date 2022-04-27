@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import TestView from '../views/TestView.vue'
+import LoginRegView from '../views/Fp-LoginRegView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'test',
     component: TestView
+  },
+  {
+    path: '/signup',
+    name: 'loginreg',
+    component: LoginRegView
   }
   // {
   //   path: '/about',

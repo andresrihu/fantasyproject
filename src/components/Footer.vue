@@ -34,6 +34,8 @@ export default {
   text-align: center;
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
 }
 .bottom {
   align-self: center;
