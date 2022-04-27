@@ -63,7 +63,6 @@ a {
 .maincontainer {
   position: fixed;
   top: 0;
-  padding-bottom: 50px;
   width: 100%;
 }
 #navBar {
@@ -95,12 +94,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.bottomContainer {
-  height: 40%;
-  width: 100%;
-  background-color: rgba(255, 0, 0, 0.699);
-  text-align: center;
 }
 .links * {
   margin: 0px 15px;

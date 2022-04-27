@@ -6,7 +6,9 @@
                 <h3>Created By Andres Rivera Hurtado, Carmen Shannon, John Cunningham, Max Ofosu</h3>
             </div>
         </div>
+
     </div>
+  </div>
 </template>
 
 <script>
@@ -15,9 +17,7 @@ export default {
   name: "Footer",
   data() {
     //   empty comment to push changes to git
-    return {
-      
-    };
+    return {};
   },
 };
 </script>
