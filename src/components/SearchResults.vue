@@ -1,74 +1,62 @@
 <template>
-  <div class="maincontainer">
-    <div class="leftcontainer list-group">
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >team</router-link
-      >
-    </div>
-    <div class="rightcontainer list-group">
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-      <router-link to="#" class="list-group-item list-group-item-action"
-        >player</router-link
-      >
-    </div>
+  <div class="maincontainer list-group">
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
+    <router-link
+      to="#"
+      class="list-group-item list-group-item-action list-group-item-secondary"
+      >player/team</router-link
+    >
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "SearchResults",
+};
 </script>
 
 <style scoped>
@@ -76,9 +64,6 @@ export default {};
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.leftcontainer,
-.rightcontainer {
-  margin: 5px;
+  flex-direction: column;
 }
 </style>
