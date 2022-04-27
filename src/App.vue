@@ -1,16 +1,23 @@
 <template>
   <Header />
   <router-view />
+  <Footer/>
+  
 </template>
 
 <script>
-/* eslint-disable */
+// eslint-disable 
 import Header from "./components/Header.vue";
+// eslint-disable-next-line no-mixed-spaces-and-tabs
+
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Header: Header,
+    Footer: Footer,
+    
   },
 };
 </script>
