@@ -31,12 +31,12 @@
 export default {
   name: "PlayerInfo",
   data() {
-	return {
-	  playerName: "Player Name",
-	  leagueTeam: "League Team Name",
-	  teamName: "Team Name",
-	  email: "email@fantasy.com",
-	};
+  return {
+    playerName: "Player Name",
+    leagueTeam: "League Team Name",
+    teamName: "Team Name",
+    email: "email@fantasy.com",
+  };
   },
 };
 </script>
