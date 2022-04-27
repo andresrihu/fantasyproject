@@ -6,7 +6,6 @@
                 <h5>Created By Andres Rivera Hurtado, Carmen Shannon, John Cunningham, Max Ofosu</h5>
             </div>
         </div>
-
     </div>
   
 </template>
@@ -42,5 +41,4 @@ export default {
         align-self: center;
         display: flex;
     }
-
 </style>
