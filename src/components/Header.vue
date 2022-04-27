@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="maincontainer">
     <div id="navBar">
       <div id="leftPanel">
         <div id="profile" class="navitem">
@@ -40,6 +40,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
 .signin {
   display: flex;
   justify-content: center;
@@ -56,7 +60,7 @@ a {
 .navitem * {
   color: white;
 }
-.container {
+.maincontainer {
   position: fixed;
   top: 0;
   padding-bottom: 50px;
