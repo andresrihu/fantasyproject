@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+
     <div class="main">
       <h2>{{ playerName }}</h2>
       <div id="circle"></div>
@@ -22,6 +23,7 @@
         <input class="btn btn-outline-primary form-control" value="Submit" />
       </form>
     </div>
+
   </div>
 </template>
 
@@ -29,12 +31,12 @@
 export default {
   name: "PlayerInfo",
   data() {
-    return {
-      playerName: "Player Name",
-      leagueTeam: "League Team Name",
-      teamName: "Team Name",
-      email: "email@fantasy.com",
-    };
+	return {
+	  playerName: "Player Name",
+	  leagueTeam: "League Team Name",
+	  teamName: "Team Name",
+	  email: "email@fantasy.com",
+	};
   },
 };
 </script>
