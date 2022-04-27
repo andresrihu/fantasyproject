@@ -5,7 +5,6 @@
         <th>Games Played</th>
         <th>Career Wins</th>
         <th>Career Losses</th>
-        <th>Career Ties</th>
         <th>Career Receptions</th>
         <th>Career Receiving Yards</th>
         <th>Career Rushing Attempts</th>
@@ -15,15 +14,14 @@
     </thead>
     <tbody>
       <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
+        <td>{{ totalGames }}</td>
+        <td>{{ wins }}</td>
+        <td>{{ losses }}</td>
+        <td>{{ receptions }}</td>
+        <td>{{ rcvYds }}</td>
+        <td>{{ rshYds }}</td>
+        <td>{{ rshAtt }}</td>
+        <td>{{ rcvTds }}</td>
       </tr>
     </tbody>
   </table>
@@ -32,6 +30,18 @@
 <script>
 export default {
   name: "AthleteDetailedInfo",
+  data() {
+    return {
+      totalGames: "432",
+      wins: "314",
+      losses: "118",
+      receptions: "1248",
+      rcvYds: "31245",
+      rshYds: "1234",
+      rshAtt: "32",
+      rcvTds: "12",
+    };
+  },
 };
 </script>
 
