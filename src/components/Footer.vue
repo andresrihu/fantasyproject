@@ -1,14 +1,14 @@
 <template>
    <div>
         <div class="footercontainer">
-             <h1>Not just another Fantasy Football Website</h1>
+             <h1>Fantasy Football Website</h1>
             <div class="bottom">
-                <h3>Created By Andres Rivera Hurtado, Carmen Shannon, John Cunningham, Max Ofosu</h3>
+                <h5>Created By Andres Rivera Hurtado, Carmen Shannon, John Cunningham, Max Ofosu</h5>
             </div>
         </div>
 
     </div>
-  </div>
+  
 </template>
 
 <script>
@@ -23,16 +23,18 @@ export default {
 </script>
 
 <style scoped>
+    h1{
+      text-align: center;  
+    }
     .footercontainer{
         display: flex; 
-        width: 100%;
         background-color: rgb(0, 0, 0);
         color: white;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center;
+        width: 100%;
         position: fixed;
         bottom: 0;
+        align-items: center;
+        justify-content: space-around;
        
 
     }

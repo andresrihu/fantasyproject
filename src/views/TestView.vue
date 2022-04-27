@@ -1,13 +1,13 @@
 <template>
-  <AthleteInjuryList />
+  <Footer />
 </template>
 
 <script>
-import AthleteInjuryList from "../components/AthleteInjuryList.vue";
+import Footer from "../components/Footer.vue";
 export default {
   name: "TestView",
   components: {
-    AthleteInjuryList: AthleteInjuryList,
+    Footer: Footer,
   }
 };
 </script>
