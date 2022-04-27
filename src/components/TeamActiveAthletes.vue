@@ -1,73 +1,95 @@
 <template>
   <div class="list-group playercontainer">
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
-    <rotuer-link class="list-group-item list-group-item-action"
-      >A Player</rotuer-link
+
+    <router-link to="#" class="list-group-item list-group-item-action"
+      >A Player</router-link
     >
   </div>
 </template>
