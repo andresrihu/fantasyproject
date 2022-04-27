@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import TestView from '../views/TestView.vue'
 import LoginRegView from '../views/Fp-LoginRegView.vue'
+import AthleteTeamStatsView from '../views/Mp-AthleteTeamsStatsView.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/signup',
     name: 'loginreg',
     component: LoginRegView
+  },
+  {
+    path: '/teamstats',
+    name: 'athleteteamstats',
+    component: AthleteTeamStatsView
   }
   // {
   //   path: '/about',
