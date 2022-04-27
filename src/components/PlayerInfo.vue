@@ -1,57 +1,57 @@
 <template>
   <div class="container">
-    <div class="main">
-      <h2>{{ playerName }}</h2>
-      <div id="circle"></div>
-      <h3>{{ teamName }}</h3>
-      <a href="#">Update {{ teamName }}</a>
-    </div>
-    <br />
-    <div class="credentials">
-      <form class="form" action="/register" method="post">
-        <input class="form-control" type="text" placeholder="{{playerName}}" />
-        <br />
-        <input class="form-control" type="text" placeholder="{{email}}" />
-        <br />
-        <input
-          class="form-control"
-          type="password"
-          placeholder="New Password"
-        />
-        <br />
-        <input class="btn btn-outline-primary form-control" value="Edit" />
-      </form>
-    </div>
-    <h2 class="cardTitle p2">Member of:</h2>
-    <div class="cardContainer p2 grid gap2 flex">
-      <div class="card">
-        <div class="card_head">
-          <h2 class="col_white1">{{ leagueTeam }}</h2>
-        </div>
-        <div class="card_body">
-          <p>{{ teamName }}</p>
-          <a href="#">Go To League</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card_head">
-          <h2 class="col_white1">{{ leagueTeam }}</h2>
-        </div>
-        <div class="card_body">
-          <p>{{ teamName }}</p>
-          <a href="#">Go To League</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card_head">
-          <h2 class="col_white1">{{ leagueTeam }}</h2>
-        </div>
-        <div class="card_body">
-          <p>{{ teamName }}</p>
-          <a href="#">Go To League</a>
-        </div>
-      </div>
-    </div>
+	<div class="main">
+	  <h2>{{ playerName }}</h2>
+	  <div id="circle"></div>
+	  <h3>{{ teamName }}</h3>
+	  <a href="#">Update {{ teamName }}</a>
+	</div>
+	<br />
+	<div class="credentials">
+	  <form class="form" action="/register" method="post">
+		<input class="form-control" type="text" placeholder="{{playerName}}" />
+		<br />
+		<input class="form-control" type="text" placeholder="{{email}}" />
+		<br />
+		<input
+		  class="form-control"
+		  type="password"
+		  placeholder="New Password"
+		/>
+		<br />
+		<input class="btn btn-outline-primary form-control" value="Edit" />
+	  </form>
+	</div>
+	<h2 class="cardTitle p2">Member of:</h2>
+	<div class="cardContainer p2 grid gap2 flex">
+	  <div class="card">
+		<div class="card_head">
+		  <h2 class="col_white1">{{ leagueTeam }}</h2>
+		</div>
+		<div class="card_body">
+		  <p>{{ teamName }}</p>
+		  <a href="#">Go To League</a>
+		</div>
+	  </div>
+	  <div class="card">
+		<div class="card_head">
+		  <h2 class="col_white1">{{ leagueTeam }}</h2>
+		</div>
+		<div class="card_body">
+		  <p>{{ teamName }}</p>
+		  <a href="#">Go To League</a>
+		</div>
+	  </div>
+	  <div class="card">
+		<div class="card_head">
+		  <h2 class="col_white1">{{ leagueTeam }}</h2>
+		</div>
+		<div class="card_body">
+		  <p>{{ teamName }}</p>
+		  <a href="#">Go To League</a>
+		</div>
+	  </div>
+	</div>
   </div>
 </template>
 
@@ -59,12 +59,12 @@
 export default {
   name: "PlayerInfo",
   data() {
-    return {
-      playerName: "Player Name",
-      leagueTeam: "League Team Name",
-      teamName: "Team Name",
-      email: "email@fantasy.com",
-    };
+	return {
+	  playerName: "Player Name",
+	  leagueTeam: "League Team Name",
+	  teamName: "Team Name",
+	  email: "email@fantasy.com",
+	};
   },
 };
 </script>
