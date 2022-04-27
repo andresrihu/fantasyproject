@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import TestView from '../views/TestView.vue'
 import LoginRegView from '../views/Fp-LoginRegView.vue'
 import TeamInfoView from '../views/Mp-TeamInfoView.vue'
+import AthleteTeamsStatsView from '../views/Mp-AthleteTeamsStatsView.vue'
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/team',
     name: 'teaminfo',
     component: TeamInfoView
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: AthleteTeamsStatsView
   }
   // {
   //   path: '/about',
