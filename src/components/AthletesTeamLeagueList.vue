@@ -1,5 +1,4 @@
 <template>
-  <h2 class="cardTitle p2">Athletes on {{teamName}}:</h2>
   <div class="cardContainer p2 grid gap2 flex">
     <div class="card">
       <div class="card_head">

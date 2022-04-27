@@ -3,6 +3,7 @@ import TestView from '../views/TestView.vue'
 import LoginRegView from '../views/Fp-LoginRegView.vue'
 import TeamInfoView from '../views/Mp-TeamInfoView.vue'
 import AthleteTeamsStatsView from '../views/Mp-AthleteTeamsStatsView.vue'
+import LeagueTeamInfoView from '../views/Fp-LeagueTeamInfoView.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/search',
     name: 'search',
     component: AthleteTeamsStatsView
+  },
+  {
+    path: '/leagueteam',
+    name: 'leagueteam',
+    component: LeagueTeamInfoView
   }
   // {
   //   path: '/about',
