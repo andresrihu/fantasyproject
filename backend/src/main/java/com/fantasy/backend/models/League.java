@@ -29,100 +29,100 @@ public class League {
 	 @Min(value=0, message="must be 2 or greater ")  
 	 private int maxteams;
 	 
-	 @Min(value=1, message="must be 1 or greater ")  
+	 @Min(value=0, message="must be 1 or greater ")  
 	 private int typeofscoring;
 	 
 	 @Min(value=0, message="must be 0 or greater ")  
 	 private int passingTDpts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int interceptpts;
 	 
 	 @Min(value=0, message="must be 0 or greater ")  
 	 private int passingydspts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int rushingtdspts;
 	 
 	 @Min(value=0, message="must be 0 or greater ")  
 	 private int rushingydspts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int receptionspts;
 	 
 	 @Min(value=0, message="must be 0 or greater ")  
 	 private int receivingtdspts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int receivingydspts;
 	 
 	 @Min(value=0, message="must be 0 or greater ")  
 	 private int returntdpts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int twoptconvptss;
 
 	 @Min(value=0, message="must be 0 or greater ")  
 	 private int fumbleslostptspts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int fieldgoals019pts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int fieldgoals2029pts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int fieldgoals3039pts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int fieldgoals4049pts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int fieldgoals50pluspts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int pointsallowed0pts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int pointsallowed16pts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int pointsallowed713pts;
 	
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int pointsallowed1420pts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int pointsallowed2127pts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int pointsallowed2834pts;
 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int pointsallowed35pluspts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int sackpts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int definterceptpts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int fumblerecovpts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int deftouchdownpts;
 	
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int safetyptss;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int blockkickpts;
 	 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int specteamtdspts;
 
-	 @Min(value=1, message="must be 0 or greater ")  
+	 @Min(value=0, message="must be 0 or greater ")  
 	 private int extrapointretpts;
 	 
 	 @ManyToMany(fetch= FetchType.LAZY)
