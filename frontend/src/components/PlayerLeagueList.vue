@@ -6,7 +6,7 @@
       </div>
       <div class="card_body">
         <p>{{ teamName }}</p>
-        <router-link to="#">Go To League</router-link>
+        <router-link to="/leagueteam">Go To League</router-link>
       </div>
     </div>
     <div class="card">
@@ -15,7 +15,7 @@
       </div>
       <div class="card_body">
         <p>{{ teamName }}</p>
-        <router-link to="#">Go To League</router-link>
+        <router-link to="/leagueteam">Go To League</router-link>
       </div>
     </div>
     <div class="card">
@@ -24,7 +24,7 @@
       </div>
       <div class="card_body">
         <p>{{ teamName }}</p>
-        <router-link to="#">Go To League</router-link>
+        <router-link to="/leagueteam">Go To League</router-link>
       </div>
     </div>
   </div>
