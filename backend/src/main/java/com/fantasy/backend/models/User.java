@@ -56,14 +56,10 @@ public class User {
     )
     private List<League> leagues;
     
-////    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
-//    @JoinTable(
-//    		name="league_team",
-//    		joinColumns = @JoinColumn(name = "user_id"),
-//    		inverseJoinColumns = @JoinColumn(name = "league_id")  		
-//    		) 
-    
-//    private List<League_Team> leagueTeams;
+
+	@OneToMany(mappedBy="user", fetch = FetchType.LAZY)
+	 private List<League_Team> league_teams;
+
     
 	@Column(updatable=false)
     private Date createdAt;
