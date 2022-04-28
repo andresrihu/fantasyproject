@@ -1,7 +1,6 @@
 package com.fantasy.backend.models;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,25 +13,26 @@ import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name = "rosters")
-
-public class Roster {
+@Table(name = "user_league")
+public class UserLeague {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "athletes_id")
-	private List<Athlete> athlete;
+	@JoinColumn(name = "league_id")
+
+	private League league;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "league_team_id")
-	private LeagueTeam league_team;
+	@JoinColumn(name = "user_id")
+	private User user;
 
-	public Roster() {
+	public UserLeague() {
 
 	}
 
@@ -44,20 +44,20 @@ public class Roster {
 		this.id = id;
 	}
 
-	public List<Athlete> getAthlete() {
-		return athlete;
+	public League getLeague() {
+		return league;
 	}
 
-	public void setAthlete(List<Athlete> athlete) {
-		this.athlete = athlete;
+	public void setLeague(League league) {
+		this.league = league;
 	}
 
-	public LeagueTeam getLeague_team() {
-		return league_team;
+	public User getUser() {
+		return user;
 	}
 
-	public void setLeague_team(LeagueTeam league_team) {
-		this.league_team = league_team;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	@Column(updatable = false)

@@ -58,7 +58,7 @@ public class User {
     
 
 	@OneToMany(mappedBy="user", fetch = FetchType.LAZY)
-	 private List<League_Team> league_teams;
+	 private List<LeagueTeam> league_teams;
 
     
 	@Column(updatable=false)

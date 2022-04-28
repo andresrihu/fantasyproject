@@ -10,393 +10,281 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="athletes")
+@Table(name = "athletes")
 public class Athlete {
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-	
-	@NotEmpty(message = "Need athlete name")
-	@Size(min=3, message = "Name must be greater than 3 characters")
-	private String athletename;
-	
-	@NotEmpty(message = "Need position")
-	@Size(min=1, message = "Postion must not be empty")
-	private String position;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	@NotEmpty(message = "Need status")
-	@Size(min=1, message = "Athlete must have a status")
-	private String status;
+	@NotNull
+	private Integer rank;
 
-	@NotEmpty(message = "Field blank")
-	@Size(min=1, message = "This field must not be empty")
-	private String gamesstarted;
+	@NotNull
+	private String name;
 
+	@NotNull
+	private Integer started;
 
-	@NotEmpty(message = "Field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String passcmp;
+	@NotNull
+	private Integer passingYds;
 
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String passatt;
+	@NotNull
+	private Integer passingTds;
 
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String passcmppct;
+	@NotNull
+	private Integer rushingYds;
 
-	@NotEmpty(message = "Field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String passyds;
+	@NotNull
+	private Integer rushingTds;
 
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String passtds;
+	@NotNull
+	private Integer recYds;
 
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String passint;
+	@NotNull
+	private Integer recTds;
 
-	@NotEmpty(message = "Field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String passrating;
+	@NotNull
+	private Integer fieldGoals;
 
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String passsacked;
+	@NotNull
+	private Double fantasyPpg;
 
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String passsackedyds;
-	
-	@NotEmpty(message = "Field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String rushatt;
+	@NotNull
+	private Integer age;
 
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String rushyds;
+	@NotNull
+	private String team;
 
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String rushydsperatt;
-	
-	@NotEmpty(message = "Field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String rushtd;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String rectargeted;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String receptions;
-	
-	@NotEmpty(message = "Field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String recyds;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String recydsperatt;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String rectds;
-	
-	@NotEmpty(message = "Field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String kickfieldgoalsatt;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String kickfieldgoalsmade;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String kickxpatt;
-	
-	@NotEmpty(message = "Field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String kickxptmade;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String defint;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String deffumrec;
-	
-	@NotEmpty(message = "Field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String defsacks;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String deftds;
-
-	@NotEmpty(message = "field blank")
-	@Size(min=3, message = "This field must not be empty")
-	private String safeties;
-	
+	@NotEmpty
 	@ManyToOne(fetch = FetchType.LAZY)
-	 @JoinColumn(name="user_id")
-	 private User user;
-	
+	@JoinColumn(name = "team_id")
+	private Team teamDb;
+
+	// private Team team;
+
+	@NotNull
+	private Integer passCompleted;
+
+	@NotNull
+	private Integer passAttempted;
+
+	@NotNull
+	private Integer interceptions;
+
+	@NotNull
+	private Integer sacked;
+
+	@NotNull
+	private Double sackedYdsLost;
+
+	@NotNull
+	private String pos;
+
 	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getAthletename() {
-		return athletename;
-	}
-	public void setAthletename(String athletename) {
-		this.athletename = athletename;
-	}
-	public String getPosition() {
-		return position;
-	}
-	public void setPosition(String position) {
-		this.position = position;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	public String getGamesstarted() {
-		return gamesstarted;
-	}
-	public void setGamesstarted(String gamesstarted) {
-		this.gamesstarted = gamesstarted;
-	}
-	public String getPasscmp() {
-		return passcmp;
-	}
-	public void setPasscmp(String passcmp) {
-		this.passcmp = passcmp;
-	}
-	public String getPassatt() {
-		return passatt;
-	}
-	public void setPassatt(String passatt) {
-		this.passatt = passatt;
-	}
-	public String getPasscmppct() {
-		return passcmppct;
-	}
-	public void setPasscmppct(String passcmppct) {
-		this.passcmppct = passcmppct;
-	}
-	public String getPassyds() {
-		return passyds;
-	}
-	public void setPassyds(String passyds) {
-		this.passyds = passyds;
-	}
-	public String getPasstds() {
-		return passtds;
-	}
-	public void setPasstds(String passtds) {
-		this.passtds = passtds;
-	}
-	public String getPassint() {
-		return passint;
-	}
-	public void setPassint(String passint) {
-		this.passint = passint;
-	}
-	public String getPassrating() {
-		return passrating;
-	}
-	public void setPassrating(String passrating) {
-		this.passrating = passrating;
-	}
-	public String getPasssacked() {
-		return passsacked;
-	}
-	public void setPasssacked(String passsacked) {
-		this.passsacked = passsacked;
-	}
-	public String getPasssackedyds() {
-		return passsackedyds;
-	}
-	public void setPasssackedyds(String passsackedyds) {
-		this.passsackedyds = passsackedyds;
-	}
-	public String getRushatt() {
-		return rushatt;
-	}
-	public void setRushatt(String rushatt) {
-		this.rushatt = rushatt;
-	}
-	public String getRushyds() {
-		return rushyds;
-	}
-	public void setRushyds(String rushyds) {
-		this.rushyds = rushyds;
-	}
-	public String getRushydsperatt() {
-		return rushydsperatt;
-	}
-	public void setRushydsperatt(String rushydsperatt) {
-		this.rushydsperatt = rushydsperatt;
-	}
-	public String getRushtd() {
-		return rushtd;
-	}
-	public void setRushtd(String rushtd) {
-		this.rushtd = rushtd;
-	}
-	public String getRectargeted() {
-		return rectargeted;
-	}
-	public void setRectargeted(String rectargeted) {
-		this.rectargeted = rectargeted;
-	}
-	public String getReceptions() {
-		return receptions;
-	}
-	public void setReceptions(String receptions) {
-		this.receptions = receptions;
-	}
-	public String getRecyds() {
-		return recyds;
-	}
-	public void setRecyds(String recyds) {
-		this.recyds = recyds;
-	}
-	public String getRecydsperatt() {
-		return recydsperatt;
-	}
-	public void setRecydsperatt(String recydsperatt) {
-		this.recydsperatt = recydsperatt;
-	}
-	public String getRectds() {
-		return rectds;
-	}
-	public void setRectds(String rectds) {
-		this.rectds = rectds;
-	}
-	public String getKickfieldgoalsatt() {
-		return kickfieldgoalsatt;
-	}
-	public void setKickfieldgoalsatt(String kickfieldgoalsatt) {
-		this.kickfieldgoalsatt = kickfieldgoalsatt;
-	}
-	public String getKickfieldgoalsmade() {
-		return kickfieldgoalsmade;
-	}
-	public void setKickfieldgoalsmade(String kickfieldgoalsmade) {
-		this.kickfieldgoalsmade = kickfieldgoalsmade;
-	}
-	public String getKickxpatt() {
-		return kickxpatt;
-	}
-	public void setKickxpatt(String kickxpatt) {
-		this.kickxpatt = kickxpatt;
-	}
-	public String getKickxptmade() {
-		return kickxptmade;
-	}
-	public void setKickxptmade(String kickxptmade) {
-		this.kickxptmade = kickxptmade;
-	}
-	public String getDefint() {
-		return defint;
-	}
-	public void setDefint(String defint) {
-		this.defint = defint;
-	}
-	public String getDeffumrec() {
-		return deffumrec;
-	}
-	public void setDeffumrec(String deffumrec) {
-		this.deffumrec = deffumrec;
-	}
-	public String getDefsacks() {
-		return defsacks;
-	}
-	public void setDefsacks(String defsacks) {
-		this.defsacks = defsacks;
-	}
-	public String getDeftds() {
-		return deftds;
-	}
-	public void setDeftds(String deftds) {
-		this.deftds = deftds;
-	}
-	public String getSafeties() {
-		return safeties;
-	}
-	public void setSafeties(String safeties) {
-		this.safeties = safeties;
-	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
+		return this.id;
+	}
+
+	public void setId(Long newId) {
+		this.id = newId;
+	}
+
+	public Integer getRank() {
+		return this.rank;
+	}
+
+	public void setRank(Integer rank) {
+		this.rank = rank;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Integer getStarted() {
+		return this.started;
+	}
+
+	public void setStarted(Integer started) {
+		this.started = started;
+	}
+
+	public Integer getPassingYds() {
+		return this.passingYds;
+	}
+
+	public void setPassingYds(Integer passingYds) {
+		this.passingYds = passingYds;
+	}
+
+	public Integer getPassingTds() {
+		return this.passingTds;
+	}
+
+	public void setPassingTds(Integer passingTds) {
+		this.passingTds = passingTds;
+	}
+
+	public Integer getRushingYds() {
+		return this.rushingYds;
+	}
+
+	public void setRushingYds(Integer rushingYds) {
+		this.rushingYds = rushingYds;
+	}
+
+	public Integer getRushingTds() {
+		return this.rushingTds;
+	}
+
+	public void setRushingTds(Integer rushingTds) {
+		this.rushingTds = rushingTds;
+	}
+
+	public Integer getRecYds() {
+		return this.recYds;
+	}
+
+	public void setRecYds(Integer recYds) {
+		this.recYds = recYds;
+	}
+
+	public Integer getRecTds() {
+		return this.recTds;
+	}
+
+	public void setRecTds(Integer recTds) {
+		this.recTds = recTds;
+	}
+
+	public Integer getFieldGoals() {
+		return this.fieldGoals;
+	}
+
+	public void setFieldGoals(Integer fieldGoals) {
+		this.fieldGoals = fieldGoals;
+	}
+
+	public Double getFantasyPpg() {
+		return this.fantasyPpg;
+	}
+
+	public void setFantasyPpg(Double fantasyPpg) {
+		this.fantasyPpg = fantasyPpg;
+	}
+
+	public Integer getAge() {
+		return this.age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	public String getTeam() {
+		return this.team;
+	}
+
+	public void setTeam(String newTeam) {
+		this.team = newTeam;
+	}
+
+	public Team getTeamDb() {
+		return this.teamDb;
+	}
+
+	public void setTeamDb(Team teamDb) {
+		this.teamDb = teamDb;
+	}
+
+	public Integer getPassCompleted() {
+		return this.passCompleted;
+	}
+
+	public void setPassCompleted(Integer passCompleted) {
+		this.passCompleted = passCompleted;
+	}
+
+	public Integer getPassAttempted() {
+		return this.passAttempted;
+	}
+
+	public void setPassAttempted(Integer passAttempted) {
+		this.passAttempted = passAttempted;
+	}
+
+	public Integer getInterceptions() {
+		return this.interceptions;
+	}
+
+	public void setInterceptions(Integer interceptions) {
+		this.interceptions = interceptions;
+	}
+
+	public Integer getSacked() {
+		return this.sacked;
+	}
+
+	public void setSacked(Integer sacked) {
+		this.sacked = sacked;
+	}
+
+	public Double getSackedYdsLost() {
+		return this.sackedYdsLost;
+	}
+
+	public void setSackedYdsLost(Double sackedYdsLost) {
+		this.sackedYdsLost = sackedYdsLost;
+	}
+
+	public String getPos() {
+		return this.pos;
+	}
+
+	public void setPos(String newPos) {
+		this.pos = newPos;
+	}
+
+	@Column(updatable = false)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date createdAt;
+
+	@PrePersist
+	protected void onCreate() {
+		this.createdAt = new Date();
+	}
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date updatedAt;
+
+	@PreUpdate
+	protected void onUpdate() {
+		this.updatedAt = new Date();
+	}
+
 	public Date getCreatedAt() {
-		return createdAt;
+		return this.createdAt;
 	}
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
+
 	public Date getUpdatedAt() {
-		return updatedAt;
+		return this.updatedAt;
 	}
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
-	}
-	
-	@Column(updatable=false)
-	 private Date createdAt;
-	 private Date updatedAt;
-	
-	
-	
-	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public Athlete() {
+
+	}
+
 }
-

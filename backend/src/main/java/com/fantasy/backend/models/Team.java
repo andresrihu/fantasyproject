@@ -1,71 +1,127 @@
 package com.fantasy.backend.models;
 
 import java.util.Date;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="teams")
+@Table(name = "teams")
 public class Team {
-	 @Id
-	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 private Long id;
-	 
-	 @NotNull
-	 @Size(min=1,max=255,message="team name cannot be blank!")
-	 private String team_name;
 
-	 @OneToMany(mappedBy="team", fetch = FetchType.LAZY)
-	 private List<Athlete> athletes;
-	 
-	 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@NotNull
+	private String name;
+
+	@NotNull
+	private Integer founded;
+
+	@NotNull
+	private Integer wins;
+
+	@NotNull
+	private Integer losses;
+
+	@NotNull
+	private Integer championships;
+
+	@NotNull
+	private String coach;
+
 	public Long getId() {
-		return id;
+		return this.id;
 	}
-	public void setId(Long id) {
-		this.id = id;
+
+	public void setId(Long newId) {
+		this.id = newId;
 	}
-	public String getTeam_name() {
-		return team_name;
+
+	public String getCoach() {
+		return this.coach;
 	}
-	public void setTeam_name(String team_name) {
-		this.team_name = team_name;
+
+	public void setCoach(String newCoach) {
+		this.coach = newCoach;
 	}
-	public List<Athlete> getAthletes() {
-		return athletes;
+
+	public Integer getChampionships() {
+		return this.championships;
 	}
-	public void setAthletes(List<Athlete> athletes) {
-		this.athletes = athletes;
+
+	public void setChampionships(Integer newChampionships) {
+		this.championships = newChampionships;
 	}
-	public Date getCreatedAt() {
-		return createdAt;
+
+	public Integer getLosses() {
+		return this.losses;
 	}
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
+
+	public void setLosses(Integer newLosses) {
+		this.losses = newLosses;
 	}
-	public Date getUpdatedAt() {
-		return updatedAt;
+
+	public Integer getWins() {
+		return this.wins;
 	}
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
+
+	public void setWins(Integer newWins) {
+		this.wins = newWins;
 	}
+
+	public Integer getFounded() {
+		return this.founded;
+	}
+
+	public void setFounded(Integer newFounded) {
+		this.founded = newFounded;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String newName) {
+		this.name = newName;
+	}
+
 	public Team() {
-	    	
-	    	
+
 	}
-	 
-	 
-	 @Column(updatable=false)
-	 private Date createdAt;
-	 private Date updatedAt;
+
+	@Column(updatable = false)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date createdAt;
+
+	@PrePersist
+	protected void onCreate() {
+		this.createdAt = new Date();
+	}
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date updatedAt;
+
+	@PreUpdate
+	protected void onUpdate() {
+		this.updatedAt = new Date();
+	}
+
+	public Date getCreatedAt() {
+		return this.createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return this.updatedAt;
+	}
+
 }
