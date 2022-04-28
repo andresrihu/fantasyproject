@@ -1,114 +1,137 @@
 <template>
-  <div
-    id="myCarousel"
-    class="carousel slide carousel-fade"
-    data-bs-ride="carousel"
-  >
-    <ol class="carousel-indicators">
-      <!-- INDICATORS -->
-      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <!-- CAROUSEL ITEM 1 -->
-      <div class="carousel-item" data-interval="2000">
-        <!-- IMAGE 1 -->
-        <div class="overlay-image">
-          <a href="google.com">
-            <img src="../assets/brady.jpg" alt="tim brady" />
-          </a>
-        </div>
-        <div class="container">
-          <h1>
-            Who is on your
-            <span style="color: red">Fantasy Platform</span> Team?
-          </h1>
-          <p>Join the Revolution!</p>
-          <a href="#" class="btn btn-lg btn-primary"> Fantasy Platform! </a>
-        </div>
-      </div>
-      <!-- CAROUSEL ITEM 2 -->
-      <div class="carousel-item active" data-interval="1000">
-        <!-- IMAGE 2 -->
-        <div
-          class="overlay-image"
-          style="background-image: url(../assets/footballman.jpg)"
-        ></div>
-        <div class="container">
-          <h1>Live <span style="color: red">Games</span></h1>
-          <p>Never Miss a Play!</p>
-          <a href="#" class="btn btn-lg btn-primary"> Live Game Stats! </a>
-        </div>
-      </div>
-      <!-- CAROUSEL ITEM 3 -->
-      <div class="carousel-item" data-interval="1000">
-        <!-- IMAGE 3 -->
-        <div
-          class="overlay-image"
-          style="background-image: url(../assets/champ.jpg)"
-        ></div>
-        <div class="container">
-          <h1>Current Stats</h1>
-          <p>
-            Home of all things <span style="color: red">Statistics</span> of
-            your favourite players and teams!
-          </p>
-          <a href="#" class="btn btn-lg btn-primary"> Current Stats! </a>
+  <div class="cont">
+    <div class="container">
+      <div class="row mt-5 mb-5">
+        <div class="col-sm-12">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <!-- ITEM 1 -->
+              <div class="carousel-item active card">
+                <div class="card-img-overlay">
+                  <h1>
+                    Who is on your <span style="">Fantasy Platform</span> Team?
+                  </h1>
+                  <h2>Join the Revolution!</h2>
+                </div>
+                <img
+                  src="../assets/brady.jpg"
+                  class="d-block w-100"
+                  alt="brady"
+                />
+              </div>
+              <!-- ITEM 2 -->
+              <div class="carousel-item card">
+                <div class="card-img-overlay">
+                  <h1>Live <span style="color: red">Games</span></h1>
+                  <h2>Never Miss a Play!</h2>
+                </div>
+                <img
+                  src="../assets/football1.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <!-- ITEM 2 -->
+              <div class="carousel-item card">
+                <div class="card-img-overlay">
+                  <h1>Current Stats</h1>
+                  <h2>
+                    Home of all things
+                    <span style="color: red">Statistics</span> of your favourite
+                    players and teams!
+                  </h2>
+                </div>
+                <img
+                  src="../assets/football2.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <!-- SPINNING FOOTBALL -->
+            <div class="d-flex justify-content-center" style="margin-top: 10px">
+              <img
+                src="../assets/spinning.gif"
+                alt="football"
+                style="height: 30px"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- LEFT ARROW TO PREVIOUS -->
-    <a
-      href="#myCarousel"
-      class="carousel-control-prev"
-      role="button"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <!-- RIGHT ARROW TO NEXT IMAGE -->
-    <a
-      href="#myCarousel"
-      class="carousel-control-next"
-      role="button"
-      data-bs-slide="next"
-    >
-      <span class="sr-only">Next</span>
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </a>
-  </div>
-  <!-- SPINNING FOOTBALL -->
-  <div class="d-flex justify-content-center" style="margin-top: 10px">
-    <img src="../assets/spinning.gif" alt="football" style="height: 30px" />
   </div>
 </template>
-
 <script>
+//importing bootstrap 5
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import * as Bootstrap from "bootstrap";
+//import DemoComponent from "./components/DemoComponent.vue"
+
 export default {
-  name: "HomeView",
-  components: {},
-  data: () => ({
-    slides: [
-      "../assets/brady.jpg",
-      "../assets/champ.jpg",
-      "../assets/footballman.jpg",
-    ],
-    visibleSlide: 0,
-  }),
+  mounted() {
+    var myCarousel = document.querySelector("#myCarousel");
+    new Bootstrap.Carousel(myCarousel);
+  },
 };
 </script>
 
-<style>
+<style scoped>
 h1,
 p {
   font-family: "Roboto Slab", serif;
-}
-.carousel{
-  width: 1500px;
-  height: 1500px;
-  margin-top: 10px;
+  color: blue;
 }
 .carousel-item {
   height: 32rem;
@@ -118,37 +141,10 @@ p {
   background-size: cover;
 }
 
-.container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding-bottom: 50px;
+
+.card-img-overlay {
+  color: rgb(251, 255, 0);
+  /* top: inherit; */
+  /* font-size: x-large; */
 }
-
-.overlay-image {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.5;
-}
-
-#myCarousel{
-  margin-top: 20px;
-}
-
-.mask-custom {
-  background: rgba(24, 24, 16, 0.2);
-  border-radius: 2em;
-  backdrop-filter: blur(15px);
-  border: 2px solid rgba(255, 255, 255, 0.05);
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
-}
-
-
 </style>
