@@ -17,8 +17,8 @@ const routes = [
   {
     // HOME ROUTE
     path: '/',
-    name: 'test',
-    component: TestView
+    name: 'homeView',
+    component: HomeView
   },
   {
     // __________________________________________LOGIN AND REGISTER
@@ -41,11 +41,7 @@ const routes = [
     name: 'leagueteam',
     component: LeagueTeamInfoView
   },
-  {
-    path: '/home',
-    name: 'home',
-    component: HomeView
-  },
+
   {
     path: '/fantasyhome',
     name: 'fantasyhome',
@@ -81,7 +77,13 @@ const routes = [
     path: '/draft',
     name: 'draft',
     component: Draft
+  },
+  {
+    path: '/test',
+    name: 'testing',
+    component: TestView
   }
+  
   // {
   //   path: '/about',
   //   name: 'about',

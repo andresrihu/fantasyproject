@@ -1,13 +1,13 @@
 <template>
-  <Footer />
+   <h2>Hello</h2>
 </template>
 
 <script>
-import Footer from "../components/Footer.vue";
+
 export default {
   name: "TestView",
   components: {
-    Footer: Footer,
+    
   }
 };
 </script>
