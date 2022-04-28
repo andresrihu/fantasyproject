@@ -11,7 +11,7 @@
           Username: {{ username }}
         </p>
       </div>
-      <button class="btn btn-primary" id="button">Edit Profile</button>
+      <button class="btn btn-primary" id="button">Edit Username</button>
     </div>
   </div>
 </template>

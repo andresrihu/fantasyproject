@@ -1,4 +1,5 @@
 <template>
+<div>
   <h2>Players Drafting:</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -26,6 +27,7 @@
       </tr>
     </tbody>
   </table>
+</div>
 </template>
 
 <script>

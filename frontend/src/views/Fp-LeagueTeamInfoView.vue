@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1>{{ leagueTeamName }}</h1>
+    <router-link to="/draft">Ready For Draft?!</router-link>
+    <router-link to="/leagueSettings">League Settings</router-link>
     <div class="maincontainer">
       <h3>Team Manager: {{ leagueTeamOwner }}</h3>
       <div class="innercontainer">

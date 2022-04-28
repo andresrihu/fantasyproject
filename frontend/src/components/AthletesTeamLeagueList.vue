@@ -6,7 +6,7 @@
       </div>
       <div class="card_body">
         <p>Position: Quarterback</p>
-        <a href="#">Go To Athlete Card</a>
+        <router-link to="/athleteInfo">Go To Athlete Card</router-link>
       </div>
     </div>
     <div class="card">
@@ -15,7 +15,7 @@
       </div>
       <div class="card_body">
         <p>Position: Kicker</p>
-        <a href="#">Go To Athlete Card</a>
+        <router-link to="/athleteInfo">Go To Athlete Card</router-link>
       </div>
     </div>
     <div class="card">
@@ -24,7 +24,7 @@
       </div>
       <div class="card_body">
         <p>Position: Runningback</p>
-        <a href="#">Go To Athlete Card</a>
+        <router-link to="/athleteInfo">Go To Athlete Card</router-link>
       </div>
     </div>
   </div>
