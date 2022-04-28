@@ -1,19 +1,21 @@
 <template>
-  <h1>Search for players or teams</h1>
-  <div class="maincontainer">
-    <div class="leftcontainer">
-      <div class="topcontainer">
-        <AthleteTeamSearch />
+  <div>
+    <h1>Search for players or teams</h1>
+    <div class="maincontainer">
+      <div class="leftcontainer">
+        <div class="topcontainer">
+          <AthleteTeamSearch />
+        </div>
+        <div class="bottomcontainer">
+          <SearchResults id="search" />
+        </div>
       </div>
-      <div class="bottomcontainer">
-        <SearchResults id="search" />
+      <div class="rightcontainer">
+        <TeamStatsCard />
+        <TeamStatsCard />
+        <AthleteStatsCard />
+        <AthleteStatsCard />
       </div>
-    </div>
-    <div class="rightcontainer">
-      <TeamStatsCard />
-      <TeamStatsCard />
-      <AthleteStatsCard />
-      <AthleteStatsCard />
     </div>
   </div>
 </template>

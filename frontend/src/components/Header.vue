@@ -8,9 +8,9 @@
           </router-link>
         </div>
         <div class="links navitem" id="navLinks">
-          <router-link to="#">{{ stats }}</router-link>
+          <router-link to="/search">{{ stats }}</router-link>
           <router-link to="/fantasyhome">{{ fantasy }}</router-link>
-          <router-link to="#">{{ live }}</router-link>
+          <router-link to="/athleteInfo">{{ live }}</router-link>
         </div>
       </div>
       <div id="rightPanel">
@@ -32,7 +32,7 @@ export default {
       pageTitle: "Fantasy Football",
       stats: "Stats",
       fantasy: "Fantasy Page",
-      live: "Live Games",
+      live: "Live Info",
       signImage: require("../assets/signImage.png"),
     };
   },
@@ -66,6 +66,7 @@ a {
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 99;
 }
 #navBar {
   height: 80px;

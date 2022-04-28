@@ -34,10 +34,10 @@
               <!-- ITEM 1 -->
               <div class="carousel-item active card">
                 <div class="card-img-overlay">
-                  <h1>
+                  <h1 class="opaque">
                     Who is on your <span style="">Fantasy Platform</span> Team?
                   </h1>
-                  <h2>Join the Revolution!</h2>
+                  <h2 class="opaque">Join the Revolution!</h2>
                 </div>
                 <img
                   src="../assets/brady.jpg"
@@ -47,14 +47,14 @@
               </div>
               <!-- ITEM 2 -->
               <div class="carousel-item card">
-                <div class="card-img-overlay">
-                  <h1>Live <span style="color: red">Games</span></h1>
-                  <h2>Never Miss a Play!</h2>
+                <div class="card-img-overlay opaque" style="z-index:0">
+                  <h1 class="opaque">Live <span style="color: red">Games</span></h1>
+                  <h2 class="opaque">Never Miss a Play!</h2>
                 </div>
                 <img
                   src="../assets/football1.jpg"
-                  class="d-block w-100"
-                  alt="..."
+                  class="d-block w-100 transparent"
+                  alt="..." 
                 />
               </div>
               <!-- ITEM 2 -->
@@ -128,6 +128,7 @@ export default {
 </script>
 
 <style scoped>
+
 h1,
 p {
   font-family: "Roboto Slab", serif;
@@ -139,6 +140,14 @@ p {
   position: relative;
   background-position: center;
   background-size: cover;
+}
+
+.opaque{
+  opacity: 1;
+  z-index: 99;
+}
+.transparent{
+  opacity: 0.5;
 }
 
 
