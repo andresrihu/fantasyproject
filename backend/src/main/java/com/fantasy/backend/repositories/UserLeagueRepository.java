@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.fantasy.backend.models.User_League;
+import com.fantasy.backend.models.UserLeague;
 
 @Repository
-public interface User_LeagueRepository extends CrudRepository<User_League, Long>{
+public interface UserLeagueRepository extends CrudRepository<UserLeague, Long>{
 
-    List<User_League> findAll();
+    List<UserLeague> findAll();
 
 }
