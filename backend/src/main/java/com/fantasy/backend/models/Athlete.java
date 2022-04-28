@@ -13,8 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -26,68 +24,48 @@ public class Athlete {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull
-	private Integer rank;
+	private Integer playerRank;
 
-	@NotNull
 	private String name;
 
-	@NotNull
 	private Integer started;
 
-	@NotNull
 	private Integer passingYds;
 
-	@NotNull
 	private Integer passingTds;
 
-	@NotNull
 	private Integer rushingYds;
 
-	@NotNull
 	private Integer rushingTds;
 
-	@NotNull
 	private Integer recYds;
 
-	@NotNull
 	private Integer recTds;
 
-	@NotNull
 	private Integer fieldGoals;
 
-	@NotNull
 	private Double fantasyPpg;
 
-	@NotNull
 	private Integer age;
 
-	@NotNull
 	private String team;
 
-	@NotEmpty
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "team_id")
 	private Team teamDb;
 
 	// private Team team;
 
-	@NotNull
 	private Integer passCompleted;
 
-	@NotNull
 	private Integer passAttempted;
 
-	@NotNull
 	private Integer interceptions;
 
-	@NotNull
 	private Integer sacked;
 
-	@NotNull
 	private Double sackedYdsLost;
 
-	@NotNull
 	private String pos;
 
 	public Long getId() {
@@ -98,12 +76,12 @@ public class Athlete {
 		this.id = newId;
 	}
 
-	public Integer getRank() {
-		return this.rank;
+	public Integer getplayerRank() {
+		return this.playerRank;
 	}
 
-	public void setRank(Integer rank) {
-		this.rank = rank;
+	public void setplayerRank(Integer playerRank) {
+		this.playerRank = playerRank;
 	}
 
 	public String getName() {
@@ -285,6 +263,10 @@ public class Athlete {
 
 	public Athlete() {
 
+	}
+
+	public Athlete(Team teamDb) {
+		this.teamDb = teamDb;
 	}
 
 }
