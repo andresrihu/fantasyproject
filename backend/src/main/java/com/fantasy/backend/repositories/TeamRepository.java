@@ -2,10 +2,7 @@ package com.fantasy.backend.repositories;
 
 import java.util.ArrayList;
 import java.util.Optional;
-
-import com.fantasy.backend.models.Athlete;
 import com.fantasy.backend.models.Team;
-
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
