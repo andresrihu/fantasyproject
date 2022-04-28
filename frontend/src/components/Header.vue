@@ -32,7 +32,7 @@ export default {
       pageTitle: "Fantasy Football",
       stats: "Stats",
       fantasy: "Fantasy Page",
-      live: "Live Games",
+      live: "Live Info",
       signImage: require("../assets/signImage.png"),
     };
   },
@@ -66,6 +66,7 @@ a {
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 99;
 }
 #navBar {
   height: 80px;

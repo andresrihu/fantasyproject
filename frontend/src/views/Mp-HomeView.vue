@@ -33,45 +33,54 @@
             <div class="carousel-inner">
               <!-- ITEM 1 -->
               <div class="carousel-item active card">
-                <div class="card-img-overlay">
-                  <h1>
-                    Who is on your <span style="">Fantasy Platform</span> Team?
-                  </h1>
-                  <h2>Join the Revolution!</h2>
-                </div>
-                <img
-                  src="../assets/brady.jpg"
-                  class="d-block w-100"
-                  alt="brady"
-                />
+                <a :href="fantasy">
+                  <div class="card-img-overlay">
+                    <h1 class="opaque">
+                      Who is on your
+                      <span style="color:red;">Fantasy Platform</span> Team?
+                    </h1>
+                    <h2 class="opaque">Join the Revolution!</h2>
+                  </div>
+                  <img
+                    src="../assets/brady.jpg"
+                    class="d-block w-100"
+                    alt="brady"
+                  />
+                </a>
               </div>
               <!-- ITEM 2 -->
               <div class="carousel-item card">
-                <div class="card-img-overlay">
-                  <h1>Live <span style="color: red">Games</span></h1>
-                  <h2>Never Miss a Play!</h2>
-                </div>
-                <img
-                  src="../assets/football1.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                <a :href="live">
+                  <div class="card-img-overlay opaque" style="z-index: 0">
+                    <h1 class="opaque">
+                      Live <span style="color: red">Games</span>
+                    </h1>
+                    <h2 class="opaque">Never Miss a Play!</h2>
+                  </div>
+                  <img
+                    src="../assets/football1.jpg"
+                    class="d-block w-100 transparent"
+                    alt="..."
+                  />
+                </a>
               </div>
               <!-- ITEM 2 -->
               <div class="carousel-item card">
-                <div class="card-img-overlay">
-                  <h1>Current Stats</h1>
-                  <h2>
-                    Home of all things
-                    <span style="color: red">Statistics</span> of your favourite
-                    players and teams!
-                  </h2>
-                </div>
-                <img
-                  src="../assets/football2.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                <a :href="stats">
+                  <div class="card-img-overlay">
+                    <h1>Current Stats</h1>
+                    <h2>
+                      Home of all things
+                      <span style="color: red">Statistics</span> of your favourite
+                      players and teams!
+                    </h2>
+                  </div>
+                  <img
+                    src="../assets/football2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  </a>
               </div>
             </div>
             <button
@@ -99,6 +108,7 @@
               <span class="visually-hidden">Next</span>
             </button>
             <!-- SPINNING FOOTBALL -->
+
             <div class="d-flex justify-content-center" style="margin-top: 10px">
               <img
                 src="../assets/spinning.gif"
@@ -124,6 +134,14 @@ export default {
     var myCarousel = document.querySelector("#myCarousel");
     new Bootstrap.Carousel(myCarousel);
   },
+  data: function () {
+    return {
+      fantasy: "/fantasyhome",
+      stats: "/search",
+      live: "/athleteInfo"
+
+    };
+  },
 };
 </script>
 
@@ -141,6 +159,13 @@ p {
   background-size: cover;
 }
 
+.opaque {
+  opacity: 1;
+  z-index: 99;
+}
+.transparent {
+  opacity: 0.5;
+}
 
 .card-img-overlay {
   color: rgb(251, 255, 0);

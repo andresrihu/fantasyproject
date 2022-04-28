@@ -38,9 +38,11 @@ h1 {
   right: 0;
   align-items: center;
   justify-content: space-around;
+  z-index: 99;
 }
 .bottom {
   align-self: center;
   display: flex;
 }
+
 </style>
