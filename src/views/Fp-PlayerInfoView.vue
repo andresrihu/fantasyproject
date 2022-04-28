@@ -1,24 +1,24 @@
 <template>
-    <div class="content">
-        <PlayerInfo/>
-        <Footer/>
-    </div>
+  <div class="content">
+    <PlayerInfo />
+    <PlayerLeagueList />
+  </div>
 </template>
 
 <script>
-import PlayerInfo from '../components/PlayerInfo.vue'
-import Footer from '../components/Footer.vue'
+import PlayerLeagueList from "@/components/PlayerLeagueList.vue";
+import PlayerInfo from "../components/PlayerInfo.vue";
 export default {
-    name: 'playerInfo',
-    components: {
-        PlayerInfo : PlayerInfo,
-        Footer : Footer
-    }
-}
+  name: "playerInfo",
+  components: {
+    PlayerInfo: PlayerInfo,
+    PlayerLeagueList: PlayerLeagueList,
+  },
+};
 </script>
 
 <style scoped>
-    .content{
-        margin : 10px;
-    }
+.content {
+  margin: 10px;
+}
 </style>

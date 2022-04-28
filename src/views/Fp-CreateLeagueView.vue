@@ -1,29 +1,24 @@
 <template>
-    <div class="content">
-        <LeagueSettingsPlayer/>
-    </div>
-    
-    <Footer/>
+  <div class="content">
+    <LeagueSettingsAdmin />
+  </div>
+
+  <Footer />
 </template>
 
-
 <script>
-import LeagueSettingsPlayer from '../components/LeagueSettingsPlayer.vue'
-import Footer from '../components/Footer.vue'
+import LeagueSettingsAdmin from "../components/LeagueSettingsAdmin.vue";
 
-export default{
-    name: "CreateLeague",
-    components: {
-        LeagueSettingsPlayer : LeagueSettingsPlayer,
-        Footer: Footer,
-    }
-}
+export default {
+  name: "CreateLeague",
+  components: {
+    LeagueSettingsAdmin: LeagueSettingsAdmin,
+  },
+};
 </script>
 
-
 <style scoped>
-    .content{
-        margin-top: 10px;
-    }
-    
+.content {
+  margin-top: 10px;
+}
 </style>
