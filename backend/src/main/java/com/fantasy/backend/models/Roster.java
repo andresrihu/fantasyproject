@@ -1,7 +1,6 @@
 package com.fantasy.backend.models;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,7 +25,7 @@ public class Roster {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "athletes_id")
-	private List<Athlete> athlete;
+	private Athlete athlete;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "league_team_id")
@@ -44,11 +43,11 @@ public class Roster {
 		this.id = id;
 	}
 
-	public List<Athlete> getAthlete() {
+	public Athlete getAthlete() {
 		return athlete;
 	}
 
-	public void setAthlete(List<Athlete> athlete) {
+	public void setAthlete(Athlete athlete) {
 		this.athlete = athlete;
 	}
 

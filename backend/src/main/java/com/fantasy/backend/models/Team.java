@@ -1,11 +1,15 @@
 package com.fantasy.backend.models;
 
 import java.util.Date;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -38,6 +42,17 @@ public class Team {
 
 	@NotNull
 	private String coach;
+
+	@OneToMany(mappedBy = "teamDb", fetch = FetchType.LAZY)
+	private List<Athlete> athletes;
+
+	public List<Athlete> getAthletes() {
+		return this.athletes;
+	}
+
+	public void setAthletes(List<Athlete> athletes) {
+		this.athletes = athletes;
+	}
 
 	public Long getId() {
 		return this.id;
