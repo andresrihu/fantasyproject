@@ -1,7 +1,12 @@
 package com.fantasy.backend.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.fantasy.backend.models.Roster;
+import com.fantasy.backend.repositories.RosterRepository;
 
 @Service
 public class RosterService {
