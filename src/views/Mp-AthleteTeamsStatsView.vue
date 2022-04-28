@@ -6,7 +6,7 @@
         <AthleteTeamSearch />
       </div>
       <div class="bottomcontainer">
-        <SearchResults />
+        <SearchResults id="search" />
       </div>
     </div>
     <div class="rightcontainer">
@@ -35,8 +35,8 @@ export default {
 </script>
 
 <style scoped>
-.maincontainer * {
-  z-index: -1;
+#search {
+  z-index: 0;
 }
 h1 {
   color: black;

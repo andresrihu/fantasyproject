@@ -1,29 +1,18 @@
 <template>
   <div class="container">
-
     <div class="main">
       <h2>{{ playerName }}</h2>
       <div id="circle"></div>
-      <h3>{{ teamName }}</h3>
-      <a href="#">Update {{ teamName }}</a>
     </div>
     <br />
     <div class="credentials">
-      <form class="form" action="/register" method="post">
-        <input class="form-control" type="text" placeholder="Player Name" />
-        <br />
-        <input class="form-control" type="text" placeholder="Email" />
-        <br />
-        <input
-          class="form-control"
-          type="password"
-          placeholder="New Password"
-        />
-        <br />
-        <input class="btn btn-outline-primary form-control" value="Submit" />
-      </form>
+      <div class="list-group">
+        <p class="list-group-item list-group-item-action">
+          Username: {{ username }}
+        </p>
+      </div>
+      <button class="btn btn-primary" id="button">Edit Profile</button>
     </div>
-
   </div>
 </template>
 
@@ -31,12 +20,12 @@
 export default {
   name: "PlayerInfo",
   data() {
-  return {
-    playerName: "Player Name",
-    leagueTeam: "League Team Name",
-    teamName: "Team Name",
-    email: "email@fantasy.com",
-  };
+    return {
+      playerName: "Player Name",
+      leagueTeam: "League Team Name",
+      teamName: "Team Name",
+      username: "Username",
+    };
   },
 };
 </script>
@@ -67,5 +56,7 @@ export default {
   flex-direction: column;
   margin: 0 auto;
 }
-
+#button {
+  margin-top: 10px;
+}
 </style>

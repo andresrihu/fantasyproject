@@ -6,14 +6,22 @@ import AthleteTeamsStatsView from '../views/Mp-AthleteTeamsStatsView.vue'
 import LeagueTeamInfoView from '../views/Fp-LeagueTeamInfoView.vue'
 import HomeView from '../views/Mp-HomeView.vue'
 import FantasyHomeView from '../views/Fp-MainView.vue'
+import CreateLeague from '../views/Fp-CreateLeagueView.vue'
+import AthleteInfo from '../views/Mp-AthleteInfoView.vue'
+import LeagueSetting from '../views/Fp-LeagueSettingsView.vue'
+import PlayerInfo from '../views/Fp-PlayerInfoView.vue'
+import Draft from '../views/Fp-DraftView.vue'
+
 
 const routes = [
   {
+    // HOME ROUTE
     path: '/',
     name: 'test',
     component: TestView
   },
   {
+    // __________________________________________LOGIN AND REGISTER
     path: '/signup',
     name: 'loginreg',
     component: LoginRegView
@@ -42,6 +50,37 @@ const routes = [
     path: '/fantasyhome',
     name: 'fantasyhome',
     component: FantasyHomeView
+  },
+  {
+
+    // _______________________________________________CREATE LEAGUE
+    path: '/createLeague',
+    name: 'creatleague',
+    component: CreateLeague
+  },
+  {
+    // ________________________________________________ATHLETE INFO
+    path: '/athleteInfo',
+    name: 'athleteInfo',
+    component: AthleteInfo
+  },
+  {
+    // ________________________________________________LEAGUE SETTINGS
+    path: '/leagueSettings',
+    name: 'leagueSetting',
+    component: LeagueSetting
+  },
+  {
+    // ________________________________________________LEAGUE SETTINGS
+    path: '/viewPlayer',
+    name: 'viewPlayer',
+    component: PlayerInfo
+  },
+  {
+    // ________________________________________________LEAGUE SETTINGS
+    path: '/draft',
+    name: 'draft',
+    component: Draft
   }
   // {
   //   path: '/about',
