@@ -1,0 +1,13 @@
+package com.fantasy.backend;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class FantasybackendApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
