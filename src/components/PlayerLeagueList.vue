@@ -1,33 +1,32 @@
 <template>
-  <h2 class="cardTitle p2">Member of:</h2>
   <div class="cardContainer p2 grid gap2 flex">
-      <div class="card">
-        <div class="card_head">
-          <h2 class="col_white1">{{ leagueTeam }}</h2>
-        </div>
-        <div class="card_body">
-          <p>{{ teamName }}</p>
-          <a href="#">Go To League</a>
-        </div>
+    <div class="card">
+      <div class="card_head">
+        <h2 class="col_white1">{{ leagueTeam }}</h2>
       </div>
-      <div class="card">
-        <div class="card_head">
-          <h2 class="col_white1">{{ leagueTeam }}</h2>
-        </div>
-        <div class="card_body">
-          <p>{{ teamName }}</p>
-          <a href="#">Go To League</a>
-        </div>
+      <div class="card_body">
+        <p>{{ teamName }}</p>
+        <router-link to="#">Go To League</router-link>
       </div>
-      <div class="card">
-        <div class="card_head">
-          <h2 class="col_white1">{{ leagueTeam }}</h2>
-        </div>
-        <div class="card_body">
-          <p>{{ teamName }}</p>
-          <a href="#">Go To League</a>
-        </div>
+    </div>
+    <div class="card">
+      <div class="card_head">
+        <h2 class="col_white1">{{ leagueTeam }}</h2>
       </div>
+      <div class="card_body">
+        <p>{{ teamName }}</p>
+        <router-link to="#">Go To League</router-link>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card_head">
+        <h2 class="col_white1">{{ leagueTeam }}</h2>
+      </div>
+      <div class="card_body">
+        <p>{{ teamName }}</p>
+        <router-link to="#">Go To League</router-link>
+      </div>
+    </div>
   </div>
 </template>
 

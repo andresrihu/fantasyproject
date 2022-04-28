@@ -4,7 +4,8 @@ import LoginRegView from '../views/Fp-LoginRegView.vue'
 import TeamInfoView from '../views/Mp-TeamInfoView.vue'
 import AthleteTeamsStatsView from '../views/Mp-AthleteTeamsStatsView.vue'
 import LeagueTeamInfoView from '../views/Fp-LeagueTeamInfoView.vue'
-import HomeView from '../views/Mp-HomeView'
+import HomeView from '../views/Mp-HomeView.vue'
+import FantasyHomeView from '../views/Fp-MainView.vue'
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/home',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/fantasyhome',
+    name: 'fantasyhome',
+    component: FantasyHomeView
   }
   // {
   //   path: '/about',
