@@ -15,70 +15,74 @@ import Draft from '../views/Fp-DraftView.vue'
 
 const routes = [
   {
-    // HOME ROUTE
+    // __________________________________________HOME VIEW
     path: '/',
     name: 'homeView',
     component: HomeView
   },
   {
-    // __________________________________________LOGIN AND REGISTER
+    // __________________________________________LOGIN AND REGISTER VIEW
     path: '/signup',
     name: 'loginreg',
     component: LoginRegView
   },
   {
+    // __________________________________________TEAM INFO VIEW
     path: '/team',
     name: 'teaminfo',
     component: TeamInfoView
   },
   {
-    path: '/search',
-    name: 'search',
+    // __________________________________________ATHLETE TEAM STATS VIEW
+    path: '/stats',
+    name: 'stats',
     component: AthleteTeamsStatsView
   },
   {
+    // __________________________________________LEAGUE TEAM INFO VIEW
     path: '/leagueteam',
     name: 'leagueteam',
     component: LeagueTeamInfoView
   },
 
   {
+    // __________________________________________FP-MAIN VIEW
     path: '/fantasyhome',
     name: 'fantasyhome',
     component: FantasyHomeView
   },
   {
-
-    // _______________________________________________CREATE LEAGUE
+    // _______________________________________________CREATE LEAGUE VIEW
     path: '/createLeague',
     name: 'creatleague',
     component: CreateLeague
   },
   {
-    // ________________________________________________ATHLETE INFO
+    // ________________________________________________ATHLETE INFO VIEW
     path: '/athleteInfo',
     name: 'athleteInfo',
     component: AthleteInfo
   },
   {
-    // ________________________________________________LEAGUE SETTINGS
+    // ________________________________________________LEAGUE SETTINGS VIEW
     path: '/leagueSettings',
     name: 'leagueSetting',
     component: LeagueSetting
   },
   {
-    // ________________________________________________LEAGUE SETTINGS
+    // ________________________________________________PLAYER INFO VIEW
     path: '/viewPlayer',
     name: 'viewPlayer',
     component: PlayerInfo
   },
   {
-    // ________________________________________________LEAGUE SETTINGS
+    // ________________________________________________DRAFT VIEW
     path: '/draft',
     name: 'draft',
     component: Draft
   },
   {
+    // ________________________________________________TEST VIEW
     path: '/test',
     name: 'testing',
     component: TestView

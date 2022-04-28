@@ -1,9 +1,11 @@
 <template>
-  <div class="content">
-    <LeagueSettingsAdmin />
-  </div>
+  <div>
+    <div class="content">
+      <LeagueSettingsAdmin />
+    </div>
 
-  <Footer />
+    <Footer />
+  </div>
 </template>
 
 <script>

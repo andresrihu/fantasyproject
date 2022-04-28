@@ -1,6 +1,6 @@
 <template>
   <div class="maincontainer">
-    <button class="btn btn-primary">Create League</button>
+    <router-link to="/createLeague">Create League</router-link>
     <div class="innercontainer">
       <div class="leftcontainer">
         <h2>Fantasy Data</h2>

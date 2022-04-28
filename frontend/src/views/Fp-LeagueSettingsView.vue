@@ -1,18 +1,19 @@
 <template>
     <div class="content">
-        <LeagueSAdmin/>
+        <router-link to="/leagueteam">Back to League View</router-link>
+        <!-- <LeagueSAdmin/> -->
         <LeagueSPlayer/>
     </div>
 </template>
 
 <script>
-import LeagueSAdmin from '../components/LeagueSettingsAdmin.vue'
+// import LeagueSAdmin from '../components/LeagueSettingsAdmin.vue'
 import LeagueSPlayer from '../components/LeagueSettingsPlayer.vue'
 
 export default {
     name: "settingsAdminPlayer",
     components: {
-        LeagueSAdmin : LeagueSAdmin,
+        // LeagueSAdmin : LeagueSAdmin,
         LeagueSPlayer : LeagueSPlayer
     }
 }
@@ -21,5 +22,6 @@ export default {
 <style scoped>
     .content{
         display: flex;
+        flex-direction: column;
     }
 </style>

@@ -1,94 +1,94 @@
 <template>
   <div class="list-group playercontainer">
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
 
-    <router-link to="#" class="list-group-item list-group-item-action"
+    <router-link to="/athleteInfo" class="list-group-item list-group-item-action"
       >A Player</router-link
     >
   </div>
