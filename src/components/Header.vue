@@ -9,14 +9,14 @@
         </div>
         <div class="links navitem" id="navLinks">
           <router-link to="#">{{ stats }}</router-link>
-          <router-link to="#">{{ fantasy }}</router-link>
+          <router-link to="/fantasyhome">{{ fantasy }}</router-link>
           <router-link to="#">{{ live }}</router-link>
         </div>
       </div>
       <div id="rightPanel">
         <div class="navitem signin">
           <img :src="signImage" alt="sign in" id="signin" />
-          <router-link to="/#">Sign In</router-link>
+          <router-link to="/signup">Sign In</router-link>
         </div>
       </div>
     </div>
