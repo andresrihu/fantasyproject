@@ -1,13 +1,15 @@
 <template>
   <div>
-    <AvailablePlayers />
     <div>
-      <TimerTimer />
-      <CreateYourTeam />
+      <AvailablePlayers />
+      <div>
+        <TimerTimer />
+        <CreateYourTeam />
+      </div>
     </div>
-  </div>
-  <div>
-    <PlayerDraftList />
+    <div>
+      <PlayerDraftList />
+    </div>
   </div>
 </template>
 

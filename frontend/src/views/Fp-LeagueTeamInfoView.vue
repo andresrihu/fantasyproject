@@ -1,10 +1,12 @@
 <template>
-  <h1>{{ leagueTeamName }}</h1>
-  <div class="maincontainer">
-    <h3>Team Manager: {{ leagueTeamOwner }}</h3>
-    <div class="innercontainer">
-      <h3>Players on team</h3>
-      <AthletesTeamLeagueList />
+  <div>
+    <h1>{{ leagueTeamName }}</h1>
+    <div class="maincontainer">
+      <h3>Team Manager: {{ leagueTeamOwner }}</h3>
+      <div class="innercontainer">
+        <h3>Players on team</h3>
+        <AthletesTeamLeagueList />
+      </div>
     </div>
   </div>
 </template>
