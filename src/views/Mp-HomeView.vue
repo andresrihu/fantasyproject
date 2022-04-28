@@ -23,7 +23,9 @@
             <span style="color: red">Fantasy Platform</span> Team?
           </h1>
           <p>Join the Revolution!</p>
-          <a href="#" class="btn btn-lg btn-primary"> Fantasy Platform! </a>
+          <router-link to="#" class="btn btn-lg btn-primary">
+            Fantasy Platform!
+          </router-link>
         </div>
       </div>
       <!-- CAROUSEL ITEM 2 -->
@@ -36,7 +38,9 @@
         <div class="maincontainer">
           <h1>Live <span style="color: red">Games</span></h1>
           <p>Never Miss a Play!</p>
-          <a href="#" class="btn btn-lg btn-primary"> Live Game Stats! </a>
+          <router-link to="#" class="btn btn-lg btn-primary">
+            Live Game Stats!
+          </router-link>
         </div>
       </div>
       <!-- CAROUSEL ITEM 3 -->
@@ -52,7 +56,9 @@
             Home of all things <span style="color: red">Statistics</span> of
             your favourite players and teams!
           </p>
-          <a href="#" class="btn btn-lg btn-primary"> Current Stats! </a>
+          <router-link to="#" class="btn btn-lg btn-primary">
+            Current Stats!
+          </router-link>
         </div>
       </div>
     </div>
