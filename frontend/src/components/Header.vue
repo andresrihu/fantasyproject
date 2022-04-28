@@ -8,9 +8,9 @@
           </router-link>
         </div>
         <div class="links navitem" id="navLinks">
-          <router-link to="/search">{{ stats }}</router-link>
+          <router-link to="/stats">{{ stats }}</router-link>
           <router-link to="/fantasyhome">{{ fantasy }}</router-link>
-          <router-link to="/athleteInfo">{{ live }}</router-link>
+          <router-link to="#">{{ live }}</router-link>
         </div>
       </div>
       <div id="rightPanel">
