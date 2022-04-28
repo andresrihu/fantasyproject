@@ -27,28 +27,31 @@ const routes = [
     component: LoginRegView
   },
   {
+    // __________________________________________TEAM INFO
     path: '/team',
     name: 'teaminfo',
     component: TeamInfoView
   },
   {
-    path: '/search',
-    name: 'search',
+    // __________________________________________STATS
+    path: '/stats',
+    name: 'stats',
     component: AthleteTeamsStatsView
   },
   {
+    // __________________________________________LEAGUE TEAM INFO
     path: '/leagueteam',
     name: 'leagueteam',
     component: LeagueTeamInfoView
   },
 
   {
+    // __________________________________________FANTASY PLATFORM
     path: '/fantasyhome',
     name: 'fantasyhome',
     component: FantasyHomeView
   },
   {
-
     // _______________________________________________CREATE LEAGUE
     path: '/createLeague',
     name: 'creatleague',
@@ -73,12 +76,13 @@ const routes = [
     component: PlayerInfo
   },
   {
-    // ________________________________________________LEAGUE SETTINGS
+    // ________________________________________________DRAFT PAGE
     path: '/draft',
     name: 'draft',
     component: Draft
   },
   {
+    // ________________________________________________TESTING PAGE
     path: '/test',
     name: 'testing',
     component: TestView

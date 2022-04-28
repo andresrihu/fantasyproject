@@ -8,7 +8,7 @@
           </router-link>
         </div>
         <div class="links navitem" id="navLinks">
-          <router-link to="#">{{ stats }}</router-link>
+          <router-link to="/stats">{{ stats }}</router-link>
           <router-link to="/fantasyhome">{{ fantasy }}</router-link>
           <router-link to="#">{{ live }}</router-link>
         </div>
