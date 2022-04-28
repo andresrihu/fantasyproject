@@ -66,4 +66,7 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
+.maincontainer * {
+  z-index: -1;
+}
 </style>
