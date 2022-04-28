@@ -1,17 +1,55 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import TestView from '../views/TestView.vue'
 import LoginRegView from '../views/Fp-LoginRegView.vue'
+import CreateLeague from '../views/Fp-CreateLeagueView.vue'
+import AthleteInfo from '../views/Mp-AthleteInfoView.vue'
+import LeagueSetting from '../views/Fp-LeagueSettingsView.vue'
+import PlayerInfo from '../views/Fp-PlayerInfoView.vue'
+import Draft from '../views/Fp-DraftView.vue'
+
 
 const routes = [
   {
+    // HOME ROUTE
     path: '/',
     name: 'test',
     component: TestView
   },
   {
+    // __________________________________________LOGIN AND REGISTER
     path: '/signup',
     name: 'loginreg',
     component: LoginRegView
+  },
+  {
+    // _______________________________________________CREATE LEAGUE
+    path: '/createLeague',
+    name: 'creatleague',
+    component: CreateLeague
+  },
+  {
+    // ________________________________________________ATHLETE INFO
+    path: '/athleteInfo',
+    name: 'athleteInfo',
+    component: AthleteInfo
+  },
+  {
+    // ________________________________________________LEAGUE SETTINGS
+    path: '/leagueSettings',
+    name: 'leagueSetting',
+    component: LeagueSetting
+  },
+  {
+    // ________________________________________________LEAGUE SETTINGS
+    path: '/viewPlayer',
+    name: 'viewPlayer',
+    component: PlayerInfo
+  },
+  {
+    // ________________________________________________LEAGUE SETTINGS
+    path: '/draft',
+    name: 'draft',
+    component: Draft
   }
   // {
   //   path: '/about',

@@ -4,6 +4,7 @@
       <div class="col-xs-6">
         <form action="/route" method="POST">
           <div class="form-group">
+            <h2 style="text-align:center;">Admin Settings</h2>
             <label class="label">Leage Name</label>
             <input v-model="leaguename" class="form-control" type="text" />
           </div>
