@@ -4,6 +4,7 @@ import LoginRegView from '../views/Fp-LoginRegView.vue'
 import TeamInfoView from '../views/Mp-TeamInfoView.vue'
 import AthleteTeamsStatsView from '../views/Mp-AthleteTeamsStatsView.vue'
 import LeagueTeamInfoView from '../views/Fp-LeagueTeamInfoView.vue'
+import HomeView from '../views/Mp-HomeView'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/leagueteam',
     name: 'leagueteam',
     component: LeagueTeamInfoView
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: HomeView
   }
   // {
   //   path: '/about',
