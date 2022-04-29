@@ -90,6 +90,10 @@ public class AthleteService {
 
         return null;
     }
+
+    public ArrayList<Athlete> readBySearch(String search) {
+        return ar.findByNameContains(search);
+    }
     // Update
     // Delete
 

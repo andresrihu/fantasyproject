@@ -13,6 +13,8 @@ public interface TeamRepository extends CrudRepository<Team, Long> {
 
     ArrayList<Team> findAll();
 
+    ArrayList<Team> findByNameContains(String search);
+
     
 
 }

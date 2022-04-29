@@ -37,4 +37,9 @@ public class AthleteController {
 
     }
 
+    @RequestMapping("/athletes/search/{search}")
+    public ArrayList<Athlete> athleteSearchResult(@PathVariable("search") String search) {
+        return as.readBySearch(search);
+    }
+
 }

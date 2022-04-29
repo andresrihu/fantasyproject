@@ -1,5 +1,5 @@
 <template>
-  <div class="maincontainer list-group">
+  <div class="maincontainer list-group" v-on:update="getListOnSearch($event)">
     <div class="playercontainer" v-if="$props.playerteam == 'player'">
       <router-link
         :to="{ name: 'athleteInfo', params: { id: athlete.id } }"
@@ -11,7 +11,7 @@
     </div>
     <div class="teamcontainer" v-if="$props.playerteam == 'team'">
       <router-link
-        :to="{ name: 'team', params: { id: team.id } }"
+        :to="{ name: 'teaminfo', params: { id: team.id } }"
         class="list-group-item list-group-item-action list-group-item-secondary"
         v-for="team in teams"
         :key="team.id"
@@ -29,13 +29,16 @@ export default {
   name: "SearchResults",
   data() {
     return {
-      athletes: [],
       teams: [],
+      athletes: [],
     };
   },
-  props: {
-    playerteam: String,
-    search: String,
+  props: ["playerteam", "search"],
+  watch: {
+    deep: true,
+    search() {
+      getListOnSearch();
+    },
   },
   methods: {
     async getAllAthletes() {
@@ -56,11 +59,44 @@ export default {
         console.log(e);
       }
     },
+    async getListOnSearch() {
+      console.log("IS IT WORKING");
+      if (this.$props.playerteam == "team") {
+        try {
+          var teamData = await SearchResultService.getTeamSearch(
+            this.$props.search
+          );
+          teamData = teamData.data;
+          this.teams = [];
+          this.teams = teamData;
+          console.log("CHANGED TEAMS");
+          console.log(this.teams);
+        } catch (e) {
+          console.log(e);
+        }
+      } else {
+        try {
+          var athleteData = await SearchResultService.getAthleteSearch(
+            this.$props.search
+          );
+          athleteData = athleteData.data;
+          this.athletes = [];
+          this.athletes = athleteData;
+          console.log("CHANGED ATHLETES");
+          console.log(this.athletes);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    },
   },
   async created() {
     await this.getAllAthletes();
     await this.getAllTeams();
   },
+  // async created() {
+  //   await this.getListOnSearch();
+  // },
 };
 </script>
 

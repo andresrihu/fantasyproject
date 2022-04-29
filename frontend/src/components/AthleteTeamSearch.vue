@@ -3,7 +3,6 @@
     <form @submit.prevent>
       <label for="search">Select team or player then search by name:</label>
       <input
-        @change="emitSearch(search)"
         v-model="search"
         name="search"
         id="search"
@@ -22,7 +21,7 @@
           <option value="team">Team</option>
         </select>
       </div>
-      <input type="button" value="Search" @click="performSearch(search)" />
+      <input type="button" value="Search" @click="emitSearch(search)" />
     </form>
   </div>
 </template>
@@ -39,11 +38,9 @@ export default {
   methods: {
     emitPlayerteam(playerteam) {
       this.$emit("playerteam", playerteam);
-      console.log(playerteam);
     },
     emitSearch(search) {
       this.$emit("searchvalue", search);
-      console.log(search);
     },
   },
 };

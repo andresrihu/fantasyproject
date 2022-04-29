@@ -30,4 +30,9 @@ public class TeamController {
         Team searchTeam = teamService.showTeam(id);
         return searchTeam;
     }
+
+    @RequestMapping("/teams/search/{search}")
+    public ArrayList<Team> teamSearchResults(@PathVariable("search") String search) {
+        return teamService.readBySearch(search);
+    }
 }

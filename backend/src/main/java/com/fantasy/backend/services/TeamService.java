@@ -31,8 +31,12 @@ public class TeamService {
         Optional<Team> team = tr.findById(id);
 
         return team.isPresent() ? team.get() : null;
-
     }
+
+    public ArrayList<Team> readBySearch(String search) {
+        return tr.findByNameContains(search);
+    }
+
 
     // Update
     public Team updateTeam(Team t) {

@@ -5,8 +5,8 @@
       <div class="leftcontainer">
         <div class="topcontainer">
           <AthleteTeamSearch
-            v-on:playerteam="setChoice(params)"
-            v-on:searchvalue="setSearch(params)"
+            v-on:playerteam="setChoice($event)"
+            v-on:searchvalue="setSearch($event)"
           />
         </div>
         <div class="bottomcontainer">

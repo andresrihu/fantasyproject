@@ -16,4 +16,6 @@ public interface AthleteRepository extends CrudRepository<Athlete, Long> {
 
     ArrayList<Athlete> findByPos(String pos);
 
+    ArrayList<Athlete> findByNameContains(String search);
+
 }
