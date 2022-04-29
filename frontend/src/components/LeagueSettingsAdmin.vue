@@ -2,7 +2,7 @@
   <div class="container w-100 p-3 h600">
     <div class="row">
       <div class="col-xs-6">
-        <form action="/route" method="POST">
+        <form action="/createLeague" method="POST">
           <div class="form-group">
             <h2 style="text-align: center">Admin Settings</h2>
             <label class="label">League Name</label>
@@ -20,7 +20,7 @@
               v-model="maxteams"
               name="maxteams"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -30,7 +30,7 @@
               v-model="typeofscoring"
               name="typeofscoring"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -40,7 +40,7 @@
               v-model="passingtdpts"
               name="passingtdpts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -50,7 +50,7 @@
               v-model="passingydspts"
               name="passingydspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -60,7 +60,7 @@
               v-model="rushingtdspts"
               name="rushingtdspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -70,7 +70,7 @@
               v-model="rushingydspts"
               name="rushingydspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -80,7 +80,7 @@
               v-model="receptionspts"
               name="receptionspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -90,7 +90,7 @@
               v-model="receivingydspts"
               name="receivingydspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -100,7 +100,7 @@
               v-model="receivingtdspts"
               name="receivingtdspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -110,7 +110,7 @@
               v-model="twoptconvptsdspts"
               name="twoptconvptsdspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -120,7 +120,7 @@
               v-model="fumbleslostpts"
               name="fumbleslostpts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
 
@@ -130,7 +130,7 @@
               v-model="fieldgoals019pts"
               name="fieldgoals019pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -139,7 +139,7 @@
               v-model="fieldgoals2029pts"
               name="fieldgoals2029pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -148,7 +148,7 @@
               v-model="fieldgoals3039pts"
               name="fieldgoals3039pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -157,7 +157,7 @@
               v-model="fieldgoals4049pts"
               name="fieldgoals4049pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -166,7 +166,7 @@
               v-model="fieldgoals50pluspts"
               name="fieldgoals50pluspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -175,7 +175,7 @@
               v-model="pointsallowed0pts"
               name="pointsallowed0pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -184,7 +184,7 @@
               v-model="pointsallowed16pts"
               name="pointsallowed16pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -193,7 +193,7 @@
               v-model="pointsallowed713pts"
               name="pointsallowed713pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -202,7 +202,7 @@
               v-model="pointsallowed1420pts"
               name="pointsallowed1420pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -211,7 +211,7 @@
               v-model="pointsallowed2127pts"
               name="pointsallowed2127pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <label class="label">Points Allowed 28-34 Points</label>
@@ -220,7 +220,7 @@
               v-model="pointsallowed2834pts"
               name="pointsallowed2834pts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -229,7 +229,7 @@
               v-model="pointsallowed35pluspts"
               name="pointsallowed35pluspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -238,7 +238,7 @@
               v-model="sackspts"
               name="sackspts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -247,7 +247,7 @@
               v-model="pdefinterceptionpts"
               name="pdefinterceptionpts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -256,7 +256,7 @@
               v-model="fumblerecovpts"
               name="fumblerecovpts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -265,7 +265,7 @@
               v-model="deftdpts"
               name="deftdpts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -274,7 +274,7 @@
               v-model="safetypts"
               name="safetypts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -283,7 +283,7 @@
               v-model="blockedkickpts"
               name="blockedkickpts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -292,7 +292,7 @@
               v-model="specialteamstdpts"
               name="specialteamstdpts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <div class="form-group">
@@ -301,7 +301,7 @@
               v-model="extraptsretpts"
               name="extraptsretpts"
               class="form-control"
-              type="text"
+              type="number"
             />
           </div>
           <button
