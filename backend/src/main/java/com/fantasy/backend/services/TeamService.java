@@ -1,6 +1,7 @@
 package com.fantasy.backend.services;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import com.fantasy.backend.models.Team;
 import com.fantasy.backend.repositories.TeamRepository;
@@ -25,7 +26,19 @@ public class TeamService {
         }
     }
     // Read
+    public Team showTeam(Long id){
+        Optional<Team> team = tr.findById(id);
+
+        return team.isPresent()?team.get():null;
+    }
     // Update
-    // Delete
+    public Team updateTeam(Team t){
+        return tr.save(t);
+    }
+    // All Teams
+    public ArrayList<Team> allTeams(){
+        return (ArrayList<Team>) tr.findAll();
+    }
+
 
 }
