@@ -28,9 +28,10 @@ const routes = [
   },
   {
     // __________________________________________TEAM INFO VIEW
-    path: '/team',
+    path: '/team/:id',
     name: 'teaminfo',
-    component: TeamInfoView
+    component: TeamInfoView,
+    params: true
   },
   {
     // __________________________________________ATHLETE TEAM STATS VIEW

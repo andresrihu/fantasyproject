@@ -24,7 +24,11 @@ public class TeamService {
             tr.save(teams.get(i));
         }
     }
+
     // Read
+    public ArrayList<Team> readAll() {
+        return tr.findAll();
+    }
     // Update
     // Delete
 

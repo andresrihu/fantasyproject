@@ -1,12 +1,23 @@
 <template>
   <div class="maincontainer list-group">
-    <router-link
-      :to="{ name: 'athleteInfo', params: { id: athlete.id } }"
-      class="list-group-item list-group-item-action list-group-item-secondary"
-      v-for="athlete in athletes"
-      :key="athlete.id"
-      >{{ athlete.name }}</router-link
-    >
+    <div class="playercontainer" v-if="$props.playerteam == 'player'">
+      <router-link
+        :to="{ name: 'athleteInfo', params: { id: athlete.id } }"
+        class="list-group-item list-group-item-action list-group-item-secondary"
+        v-for="athlete in athletes"
+        :key="athlete.id"
+        >{{ athlete.name }}</router-link
+      >
+    </div>
+    <div class="teamcontainer" v-if="$props.playerteam == 'team'">
+      <router-link
+        :to="{ name: 'team', params: { id: team.id } }"
+        class="list-group-item list-group-item-action list-group-item-secondary"
+        v-for="team in teams"
+        :key="team.id"
+        >{{ team.name }}</router-link
+      >
+    </div>
   </div>
 </template>
 
@@ -18,7 +29,12 @@ export default {
   data() {
     return {
       athletes: [],
+      teams: [],
     };
+  },
+  props: {
+    playerteam: String,
+    search: String,
   },
   methods: {
     async getAllAthletes() {
@@ -30,9 +46,19 @@ export default {
         console.log(e);
       }
     },
+    // async getAllTeams() {
+    //   try {
+    //     var teamData = await SearchResultService.getTeams();
+    //     teamData = teamData.data;
+    //     this.teams = teamData;
+    //   } catch (e) {
+    //     console.log(e);
+    //   }
+    // },
   },
-  created() {
-    this.getAllAthletes();
+  async created() {
+    await this.getAllAthletes();
+    // await this.getAllTeams();
   },
 };
 </script>
