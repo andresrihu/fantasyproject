@@ -27,7 +27,14 @@ public class UserController {
     // ========= LOGIN & REGISTRATION =================
   
   @PostMapping("/register")
-  public String register(@RequestParam("user_name") User user, BindingResult result, Model model, HttpSession session) {
+  public String register
+  (
+    @RequestParam("user_name") User user,
+    BindingResult result,
+    Model model,
+    HttpSession session
+  ) {
+
     if(result.hasErrors()) {
       model.addAttribute("newLogin", new LoginUser());
       return "main";
@@ -42,7 +49,14 @@ public class UserController {
   }
 
     @PostMapping("/login")
-  public String login(@RequestParam("email") LoginUser form_user, BindingResult result, Model model, HttpSession session) {
+  public String login
+  (
+    @RequestParam("email") LoginUser form_user,
+    BindingResult result,
+    Model model,
+    HttpSession session
+  ) {
+    
     if(result.hasErrors()) {
       model.addAttribute("user", new User());
       return "main";
