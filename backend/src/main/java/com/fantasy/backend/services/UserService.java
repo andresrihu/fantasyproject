@@ -76,7 +76,7 @@ public class UserService {
     }
     
 //    SESSION FUNCTION TO CHECK LOGGED IN
-    public Boolean isLoggedIN(HttpSession session) {
+    public static Boolean isLoggedIN(HttpSession session) {
     	return session.getAttribute("user_id")!=null;
     }
 //  SESSION FUNCTION TO CHECK LOGGED IN
@@ -92,6 +92,15 @@ public class UserService {
 	}
     
 //    
+    public static String Deny()
+	{
+		return "user_deny";
+	}
+    
+    public static Boolean IsLoggedIn(HttpSession session)
+	{
+		return session.getAttribute("user_id")!=null;
+	}
     
 
     

@@ -4,139 +4,212 @@
       <div class="col-xs-6">
         <form action="/route" method="POST">
           <div class="form-group">
-            <h2 style="text-align:center;">Admin Settings</h2>
+            <h2 style="text-align: center">Admin Settings</h2>
             <label class="label">League Name</label>
-            <input v-model="leaguename" class="form-control" type="text" />
+            <input
+              v-model="leaguename"
+              name="leaguename"
+              class="form-control"
+              type="text"
+            />
           </div>
 
           <div class="form-group">
             <label class="label">Max Teams</label>
-            <input v-model="maxteams" class="form-control" type="text" />
+            <input
+              v-model="maxteams"
+              name="maxteams"
+              class="form-control"
+              type="text"
+            />
           </div>
 
           <div class="form-group">
             <label class="label">Type of Scoring</label>
-            <input v-model="typeofscoring" class="form-control" type="text" />
+            <input
+              v-model="typeofscoring"
+              name="typeofscoring"
+              class="form-control"
+              type="text"
+            />
           </div>
 
-          <label class="label">Passing Touchdown Points</label>
           <div class="form-group">
-            <input v-model="passingtdpts" class="form-control" type="text" />
+            <label class="label">Passing Touchdown Points</label>
+            <input
+              v-model="passingtdpts"
+              name="passingtdpts"
+              class="form-control"
+              type="text"
+            />
           </div>
 
-          <label class="label">Passing Yards Points</label>
           <div class="form-group">
-            <input v-model="passingydspts" class="form-control" type="text" />
+            <label class="label">Passing Yards Points</label>
+            <input
+              v-model="passingydspts"
+              name="passingydspts"
+              class="form-control"
+              type="text"
+            />
           </div>
 
-          <label class="label">Rushing TDs Points</label>
           <div class="form-group">
-            <input v-model="rushingtdspts" class="form-control" type="text" />
+            <label class="label">Rushing TDs Points</label>
+            <input
+              v-model="rushingtdspts"
+              name="rushingtdspts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Rushing YDs Points</label>
+
           <div class="form-group">
-            <input v-model="rushingydspts" class="form-control" type="text" />
+            <label class="label">Rushing YDs Points</label>
+            <input
+              v-model="rushingydspts"
+              name="rushingydspts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Receptions Points</label>
+
           <div class="form-group">
-            <input v-model="receptionspts" class="form-control" type="text" />
+            <label class="label">Receptions Points</label>
+            <input
+              v-model="receptionspts"
+              name="receptionspts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Receiving YDs Points</label>
+
           <div class="form-group">
-            <input v-model="receivingydspts" class="form-control" type="text" />
+            <label class="label">Receiving YDs Points</label>
+            <input
+              v-model="receivingydspts"
+              name="receivingydspts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Receiving TDs Points</label>
+
           <div class="form-group">
-            <input v-model="receivingtdspts" class="form-control" type="text" />
+            <label class="label">Receiving TDs Points</label>
+            <input
+              v-model="receivingtdspts"
+              name="receivingtdspts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Two Point Conversion Points</label>
+
           <div class="form-group">
+            <label class="label">Two Point Conversion Points</label>
             <input
               v-model="twoptconvptsdspts"
+              name="twoptconvptsdspts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Fumbles Lost Points</label>
+
           <div class="form-group">
-            <input v-model="fumbleslostpts" class="form-control" type="text" />
+            <label class="label">Fumbles Lost Points</label>
+            <input
+              v-model="fumbleslostpts"
+              name="fumbleslostpts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Field Goals 0-19 Points</label>
+
           <div class="form-group">
+            <label class="label">Field Goals 0-19 Points</label>
             <input
               v-model="fieldgoals019pts"
+              name="fieldgoals019pts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Field Goals 20-29 Points</label>
           <div class="form-group">
+            <label class="label">Field Goals 20-29 Points</label>
             <input
               v-model="fieldgoals2029pts"
+              name="fieldgoals2029pts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Field Goals 30-39 Points</label>
           <div class="form-group">
+            <label class="label">Field Goals 30-39 Points</label>
             <input
               v-model="fieldgoals3039pts"
+              name="fieldgoals3039pts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Field Goals 40-49 Points</label>
           <div class="form-group">
+            <label class="label">Field Goals 40-49 Points</label>
             <input
               v-model="fieldgoals4049pts"
+              name="fieldgoals4049pts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Field Goals 50+ Points</label>
           <div class="form-group">
+            <label class="label">Field Goals 50+ Points</label>
             <input
               v-model="fieldgoals50pluspts"
+              name="fieldgoals50pluspts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Points Allowed 0 Points</label>
           <div class="form-group">
+            <label class="label">Points Allowed 0 Points</label>
             <input
               v-model="pointsallowed0pts"
+              name="pointsallowed0pts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Points Allowed 1-6 Points</label>
           <div class="form-group">
+            <label class="label">Points Allowed 1-6 Points</label>
             <input
               v-model="pointsallowed16pts"
+              name="pointsallowed16pts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Points Allowed 7-13 Points</label>
           <div class="form-group">
+            <label class="label">Points Allowed 7-13 Points</label>
             <input
               v-model="pointsallowed713pts"
+              name="pointsallowed713pts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Points Allowed 14-20 Points</label>
           <div class="form-group">
+            <label class="label">Points Allowed 14-20 Points</label>
             <input
               v-model="pointsallowed1420pts"
+              name="pointsallowed1420pts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Points Allowed 21-27 Points</label>
           <div class="form-group">
+            <label class="label">Points Allowed 21-27 Points</label>
             <input
               v-model="pointsallowed2127pts"
+              name="pointsallowed2127pts"
               class="form-control"
               type="text"
             />
@@ -145,60 +218,98 @@
           <div class="form-group">
             <input
               v-model="pointsallowed2834pts"
+              name="pointsallowed2834pts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Points Allowed 35+ Points</label>
           <div class="form-group">
+            <label class="label">Points Allowed 35+ Points</label>
             <input
               v-model="pointsallowed35pluspts"
+              name="pointsallowed35pluspts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Sacks Points</label>
           <div class="form-group">
-            <input v-model="sackspts" class="form-control" type="text" />
+            <label class="label">Sacks Points</label>
+            <input
+              v-model="sackspts"
+              name="sackspts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Interception Points</label>
           <div class="form-group">
+            <label class="label">Interception Points</label>
             <input
               v-model="pdefinterceptionpts"
+              name="pdefinterceptionpts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Fumble Recovery Points</label>
           <div class="form-group">
-            <input v-model="fumblerecovpts" class="form-control" type="text" />
+            <label class="label">Fumble Recovery Points</label>
+            <input
+              v-model="fumblerecovpts"
+              name="fumblerecovpts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Defense Touchdown Points</label>
           <div class="form-group">
-            <input v-model="deftdpts" class="form-control" type="text" />
+            <label class="label">Defense Touchdown Points</label>
+            <input
+              v-model="deftdpts"
+              name="deftdpts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Safety Points</label>
           <div class="form-group">
-            <input v-model="safetypts" class="form-control" type="text" />
+            <label class="label">Safety Points</label>
+            <input
+              v-model="safetypts"
+              name="safetypts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Blocked Kick Points</label>
           <div class="form-group">
-            <input v-model="blockedkickpts" class="form-control" type="text" />
+            <label class="label">Blocked Kick Points</label>
+            <input
+              v-model="blockedkickpts"
+              name="blockedkickpts"
+              class="form-control"
+              type="text"
+            />
           </div>
-          <label class="label">Special Teams TDs Points</label>
           <div class="form-group">
+            <label class="label">Special Teams TDs Points</label>
             <input
               v-model="specialteamstdpts"
+              name="specialteamstdpts"
               class="form-control"
               type="text"
             />
           </div>
-          <label class="label">Extra Point Return Points</label>
           <div class="form-group">
-            <input v-model="extraptsretpts" class="form-control" type="text" />
+            <label class="label">Extra Point Return Points</label>
+            <input
+              v-model="extraptsretpts"
+              name="extraptsretpts"
+              class="form-control"
+              type="text"
+            />
           </div>
           <button
-            class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left"
+            class="
+              btn btn-primary btn-color btn-bg-color btn-sm
+              col-xs-2
+              margin-left
+            "
             type="submit"
           >
             Submit
