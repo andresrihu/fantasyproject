@@ -152,7 +152,7 @@ p {
   color: blue;
 }
 .carousel-item {
-  height: 32rem;
+  height: 42rem;
   background: rgb(133, 132, 132);
   position: relative;
   background-position: center;
