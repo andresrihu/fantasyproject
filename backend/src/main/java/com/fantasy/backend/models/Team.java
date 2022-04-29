@@ -15,6 +15,8 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -43,6 +45,7 @@ public class Team {
 	@NotNull
 	private String coach;
 
+	@JsonManagedReference
 	@OneToMany(mappedBy = "teamDb", fetch = FetchType.LAZY)
 	private List<Athlete> athletes;
 
