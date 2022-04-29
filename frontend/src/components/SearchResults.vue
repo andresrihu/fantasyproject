@@ -22,6 +22,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import SearchResultService from "../services/SearchResultService";
 
 export default {
@@ -46,19 +47,19 @@ export default {
         console.log(e);
       }
     },
-    // async getAllTeams() {
-    //   try {
-    //     var teamData = await SearchResultService.getTeams();
-    //     teamData = teamData.data;
-    //     this.teams = teamData;
-    //   } catch (e) {
-    //     console.log(e);
-    //   }
-    // },
+    async getAllTeams() {
+      try {
+        var teamData = await SearchResultService.getTeams();
+        teamData = teamData.data;
+        this.teams = teamData;
+      } catch (e) {
+        console.log(e);
+      }
+    },
   },
   async created() {
     await this.getAllAthletes();
-    // await this.getAllTeams();
+    await this.getAllTeams();
   },
 };
 </script>
