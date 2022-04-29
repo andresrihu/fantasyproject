@@ -39,6 +39,8 @@ export default {
 <style scoped>
 #search {
   z-index: 0;
+  max-height: 400px;
+  overflow-y: scroll;
 }
 h1 {
   color: black;
