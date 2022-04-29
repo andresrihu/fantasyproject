@@ -34,10 +34,6 @@ public class UserService {
       result.rejectValue("password", "password_invalid", "Password and Password Confirmation must match!");
       errors++;
     }
-    
-//    SESSION FUNCTION TO CHECK LOGGED IN
-    public static Boolean isLoggedIN(HttpSession session) {
-    	return session.getAttribute("user_id")!=null;
 
     // HASHING PASSWORD
     String hashed_pw = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(8));
@@ -98,12 +94,8 @@ public class UserService {
     if (session.getAttribute("user_id") != null) {
       session.invalidate();
     }
-      
-//    FIND ALL USERS
-    public List<User> allUsers(){
-		return (List<User>) userRepository.findAll();
-	}
-    
+  }
+
 //    
     public static String Deny()
 	{

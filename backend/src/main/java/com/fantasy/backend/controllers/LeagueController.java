@@ -3,8 +3,6 @@ package com.fantasy.backend.controllers;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,12 +15,9 @@ import com.fantasy.backend.services.UserService;
 public class LeagueController {
 	@Autowired
 	private LeagueService leagueService;
-	@Autowired
-	private UserService userService;
 	
-	public LeagueController(LeagueService leagueService, UserService userService ) {
+	public LeagueController(LeagueService leagueService) {
 		this.leagueService = leagueService;
-		this.userService = userService;
 	}
 		
 	@PostMapping("/createLeague")
