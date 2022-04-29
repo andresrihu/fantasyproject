@@ -33,7 +33,7 @@
             <div class="carousel-inner">
               <!-- ITEM 1 -->
               <div class="carousel-item active card">
-                <a :href="fantasy">
+                <router-link to="/fantasyhome">
                   <div class="card-img-overlay">
                     <h1 class="opaque">
                       Who is on your
@@ -46,14 +46,14 @@
                     class="d-block w-100"
                     alt="brady"
                   />
-                </a>
+                </router-link>
               </div>
               <!-- ITEM 2 -->
               <div class="carousel-item card">
                 <router-link to="/stats">
                   <div class="card-img-overlay opaque" style="z-index: 0">
                     <h1 class="opaque">
-                      Live <span style="color: red">Games</span>
+                      Live <span style="color: red">Games Stats</span>
                     </h1>
                     <h2 class="opaque">Never Miss a Play!</h2>
                   </div>
@@ -66,9 +66,9 @@
               </div>
               <!-- ITEM 2 -->
               <div class="carousel-item card">
-                <a :href="stats">
+                <router-link to="/search">
                   <div class="card-img-overlay">
-                    <h1>Current Stats</h1>
+                    <h1>Search for More</h1>
                     <h2>
                       Home of all things
                       <span style="color: red">Statistics</span> of your favourite
@@ -80,7 +80,7 @@
                     class="d-block w-100"
                     alt="..."
                   />
-                  </a>
+                </router-link>
               </div>
             </div>
             <button
