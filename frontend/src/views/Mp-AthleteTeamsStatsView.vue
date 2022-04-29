@@ -4,13 +4,15 @@
     <div class="maincontainer">
       <div class="leftcontainer">
         <div class="topcontainer">
-          <AthleteTeamSearch />
+          <AthleteTeamSearch
+            v-on:playerteam="setChoice(params)"
+            v-on:searchvalue="setSearch(params)"
+          />
         </div>
         <div class="bottomcontainer">
           <SearchResults
             :playerteam="choice"
             :search="inputsearch"
-            @setprops="searchParam(search, playerteam)"
             id="search"
           />
         </div>
@@ -32,13 +34,17 @@ export default {
   data() {
     return {
       choice: "player",
-      search: '',
+      search: "",
     };
   },
   methods: {
-    setProps(search, newChoice) {
+    setChoice(newChoice) {
       this.choice = newChoice;
-      this.search = search;
+      console.log(this.choice);
+    },
+    setSearch(newSearch) {
+      this.search = newSearch;
+      console.log(this.search);
     },
   },
 };

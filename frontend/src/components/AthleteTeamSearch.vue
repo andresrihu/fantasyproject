@@ -22,6 +22,7 @@
           <option value="team">Team</option>
         </select>
       </div>
+      <input type="button" value="Search" @click="performSearch(search)" />
     </form>
   </div>
 </template>
@@ -38,9 +39,11 @@ export default {
   methods: {
     emitPlayerteam(playerteam) {
       this.$emit("playerteam", playerteam);
+      console.log(playerteam);
     },
     emitSearch(search) {
       this.$emit("searchvalue", search);
+      console.log(search);
     },
   },
 };
