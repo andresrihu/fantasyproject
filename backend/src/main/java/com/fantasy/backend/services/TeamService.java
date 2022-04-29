@@ -27,33 +27,21 @@ public class TeamService {
     }
 
     // Read
-<<<<<<< HEAD
-
-=======
-// <<<<<<< HEAD
-    public ArrayList<Team> readAll() {
-        return tr.findAll();
-    }
-// =======
->>>>>>> 746375fa94d76a21e3a82922ed6316e8b3c6892d
-    public Team showTeam(Long id){
+    public Team showTeam(Long id) {
         Optional<Team> team = tr.findById(id);
 
-        return team.isPresent()?team.get():null;
-<<<<<<< HEAD
+        return team.isPresent() ? team.get() : null;
 
-=======
-// >>>>>>> 387fa2b2f5a3e760cd0b62cb4a14af37bd857aea
->>>>>>> 746375fa94d76a21e3a82922ed6316e8b3c6892d
     }
+
     // Update
-    public Team updateTeam(Team t){
+    public Team updateTeam(Team t) {
         return tr.save(t);
     }
+
     // All Teams
-    public ArrayList<Team> allTeams(){
+    public ArrayList<Team> allTeams() {
         return (ArrayList<Team>) tr.findAll();
     }
-
 
 }
