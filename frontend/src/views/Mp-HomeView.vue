@@ -50,7 +50,7 @@
               </div>
               <!-- ITEM 2 -->
               <div class="carousel-item card">
-                <a :href="live">
+                <router-link to="/stats">
                   <div class="card-img-overlay opaque" style="z-index: 0">
                     <h1 class="opaque">
                       Live <span style="color: red">Games</span>
@@ -62,7 +62,7 @@
                     class="d-block w-100 transparent"
                     alt="..."
                   />
-                </a>
+                </router-link>
               </div>
               <!-- ITEM 2 -->
               <div class="carousel-item card">
