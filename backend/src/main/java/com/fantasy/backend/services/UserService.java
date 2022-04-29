@@ -35,10 +35,6 @@ public class UserService {
       errors++;
     }
 
-    if (errors > 0) {
-      return null;
-    }
-
     // HASHING PASSWORD
     String hashed_pw = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(8));
 
@@ -99,5 +95,16 @@ public class UserService {
       session.invalidate();
     }
   }
+
+//    
+    public static String Deny()
+	{
+		return "user_deny";
+	}
+    
+    public static Boolean IsLoggedIn(HttpSession session)
+	{
+		return session.getAttribute("user_id")!=null;
+	}
 
 }
