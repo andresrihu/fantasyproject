@@ -14,6 +14,8 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -50,6 +52,7 @@ public class Athlete {
 
 	private String team;
 
+	@JsonBackReference
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "team_id")
 	private Team teamDb;
@@ -76,11 +79,11 @@ public class Athlete {
 		this.id = newId;
 	}
 
-	public Integer getplayerRank() {
+	public Integer getPlayerRank() {
 		return this.playerRank;
 	}
 
-	public void setplayerRank(Integer playerRank) {
+	public void setPlayerRank(Integer playerRank) {
 		this.playerRank = playerRank;
 	}
 

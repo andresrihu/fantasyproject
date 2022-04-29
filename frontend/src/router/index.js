@@ -28,8 +28,15 @@ const routes = [
   },
   {
     // __________________________________________TEAM INFO VIEW
-    path: '/team',
+    path: '/team/:id',
     name: 'teaminfo',
+    component: TeamInfoView,
+    params: true
+  },
+  {
+    // __________________________________________TEAM INFO POST VIEW
+    path: '/team/:id',
+    name: 'showteaminfo',
     component: TeamInfoView
   },
   {
@@ -54,14 +61,15 @@ const routes = [
   {
     // _______________________________________________CREATE LEAGUE VIEW
     path: '/createLeague',
-    name: 'creatleague',
+    name: 'createleague',
     component: CreateLeague
   },
   {
     // ________________________________________________ATHLETE INFO VIEW
-    path: '/athleteInfo',
+    path: '/athleteInfo/:id',
     name: 'athleteInfo',
-    component: AthleteInfo
+    component: AthleteInfo,
+    params: true
   },
   {
     // ________________________________________________LEAGUE SETTINGS VIEW

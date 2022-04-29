@@ -7,14 +7,13 @@
           <AthleteTeamSearch />
         </div>
         <div class="bottomcontainer">
-          <SearchResults id="search" />
+          <SearchResults
+            :playerteam="choice"
+            :search="inputsearch"
+            @setprops="searchParam(search, playerteam)"
+            id="search"
+          />
         </div>
-      </div>
-      <div class="rightcontainer">
-        <TeamStatsCard />
-        <TeamStatsCard />
-        <AthleteStatsCard />
-        <AthleteStatsCard />
       </div>
     </div>
   </div>
@@ -23,15 +22,24 @@
 <script>
 import AthleteTeamSearch from "@/components/AthleteTeamSearch.vue";
 import SearchResults from "@/components/SearchResults.vue";
-import TeamStatsCard from "@/components/TeamStatsCard.vue";
-import AthleteStatsCard from "@/components/AthleteStatsCard.vue";
+
 export default {
   name: "AthleteTeamsStatsView",
   components: {
     AthleteTeamSearch: AthleteTeamSearch,
     SearchResults: SearchResults,
-    TeamStatsCard: TeamStatsCard,
-    AthleteStatsCard: AthleteStatsCard,
+  },
+  data() {
+    return {
+      choice: "player",
+      search: '',
+    };
+  },
+  methods: {
+    setProps(search, newChoice) {
+      this.choice = newChoice;
+      this.search = search;
+    },
   },
 };
 </script>
@@ -39,6 +47,8 @@ export default {
 <style scoped>
 #search {
   z-index: 0;
+  max-height: 400px;
+  overflow-y: scroll;
 }
 h1 {
   color: black;
