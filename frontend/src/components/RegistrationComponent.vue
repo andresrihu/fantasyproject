@@ -11,7 +11,7 @@
       <label>Confirm Password</label>
       <input type="password" required v-model="confirm_password" />
       <div class="submit">
-        <button>Sign Up</button>
+      <input type="submit" class="btn btn-primary">
       </div>
     </form>
     <div v-if="nameError">{{ nameError }}</div>
