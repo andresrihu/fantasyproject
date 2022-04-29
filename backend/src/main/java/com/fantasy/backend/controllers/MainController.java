@@ -7,16 +7,21 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.fantasy.backend.models.Athlete;
 import com.fantasy.backend.models.League;
+import com.fantasy.backend.models.LoginUser;
+import com.fantasy.backend.models.User;
 import com.fantasy.backend.services.AthleteService;
 import com.fantasy.backend.services.Converter;
 import com.fantasy.backend.services.LeagueService;
 import com.fantasy.backend.services.TeamService;
+import com.fantasy.backend.services.UserService;
 
 @Controller
 public class MainController implements ErrorController {
@@ -26,6 +31,9 @@ public class MainController implements ErrorController {
 
     @Autowired
     private TeamService ts;
+    
+    @Autowired
+    private UserService userService;
     
     @Autowired
 	private LeagueService leagueService;
@@ -107,5 +115,28 @@ public class MainController implements ErrorController {
 		
 		return "redirect:/";
 	}
+    
+    
+    @PostMapping("/register")
+    public String register
+    (
+      @RequestParam("user_name") User user,
+      BindingResult result,
+      Model model,
+      HttpSession session
+    ) {
+
+      if(result.hasErrors()) {
+        model.addAttribute("newLogin", new LoginUser());
+        return "main";
+      }
+      User errors = userService.register(user, result);
+      if(errors == null) {
+        return "main";
+      }
+//      session.setAttribute("user_id", user.getId());
+//      session.setAttribute("user_name", user.getUserName());
+      return "redirect:/";
+    }
 
 }
