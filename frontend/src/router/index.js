@@ -34,6 +34,12 @@ const routes = [
     params: true
   },
   {
+    // __________________________________________TEAM INFO POST VIEW
+    path: '/team/:id',
+    name: 'showteaminfo',
+    component: TeamInfoView
+  },
+  {
     // __________________________________________ATHLETE TEAM STATS VIEW
     path: '/stats',
     name: 'stats',
