@@ -7,19 +7,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fantasy.backend.services.UserLeagueService;
+
 import com.fantasy.backend.services.UserService;
 
 @RestController
 public class UserLeagueController {
-	@Autowired
-	private UserLeagueService userLeagueService;
+	
 	
 	@Autowired
 	private UserService userService;
 	
-	public UserLeagueController(UserLeagueService userLeagueService, UserService userService) {
-		this.userLeagueService = userLeagueService;
+	public UserLeagueController(UserService userService) {
 		this.userService = userService;
 	}
 	
